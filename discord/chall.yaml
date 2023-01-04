@@ -1,0 +1,13 @@
+name: Discord
+categories:
+  - misc
+value: 25
+flag: bcactf{4n0tH3R_d15C0rD_ch4Ll_jBu4Xpk}
+description: |-
+  [Join our Discord Server](https://discord.com/invite/9Hnz7aCmr6) to find a team, talk to other players, and more.
+  There might also be a flag somewhere. Maybe.
+hints:
+  - The announcements channel is a good place to look.
+authors:
+  - Krish
+visible: true
