@@ -1,0 +1,14 @@
+name: Studious Notetaking
+categories:
+  - misc
+value: 125
+flag: bcactf{a++_FOr_nOtE7ak1N9}
+description: |-
+  My good friend is an assiduous student and has been diligently taking notes [here](https://github.com/Puhalenthi/REPO-OF-EPICNESS).
+  I don't see his notes! Do you?
+hints:
+  - GitHub won't be useful here. Clone the repository using Git and have a look around.
+  - Where in that repository might he be using Git to hide his notes?
+authors:
+  - Puhalenthi
+visible: true
