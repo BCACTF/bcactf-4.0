@@ -1,0 +1,20 @@
+name: Signature I
+categories:
+  - crypto
+value: 25
+flag: bcactf{this_is_a_flag}
+# Alternatively:
+# flag:
+#   file: ./flag.txt
+# 
+description: |-
+  I somehow forgot my public key! I still have my private key, though, and found this old signed message of mine. Can you help?
+hints:
+  - 
+files:
+  - src: signature.txt
+authors:
+  - John Doe
+  - Jane Smith
+visible: true
+# TODO: deployment
