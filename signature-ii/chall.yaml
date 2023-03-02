@@ -7,7 +7,8 @@ flag:
 description: |-
   I recently implemented this new signing algorithm! Can you recover the flag?
 hints:
-  - # TODO
+  - This is a modification of a specific standard algorithm (with several security vulnerabilities)
+  - Wikipedia will help
 files:
   - src: ./signature-ii.sage
   - src: ./signature-ii-log.txt
