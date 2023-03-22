@@ -1,0 +1,5 @@
+1. Make a copy
+2. Select all and set text to black
+3. Sort sheet by column A
+4. Filter second column by not empty
+5. Combine the characters to get the flag
