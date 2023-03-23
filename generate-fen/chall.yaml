@@ -1,0 +1,13 @@
+name: Generate FEN
+categories:
+  - misc
+value: 75
+flag: bcactf{3r1b1r/pbp1prpp/rpkqrnr1/3N1r1r/1r1r4/1nrP1P2/2Q5/3K1R2}
+description: |-
+  View the image and figure out the FEN notation for the chess position.
+  The flag is bcactf{xyz} where xyz is the first 55 characters of the FEN string.
+authors:
+  - Michael
+files:
+  - src: ./chess.png
+visible: true
