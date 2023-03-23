@@ -1,7 +1,7 @@
 name: Studious Notetaking
 categories:
   - misc
-value: 150
+value: 100
 flag: bcactf{a++_FOr_nOtE7ak1N9}
 description: |-
   My good friend is an assiduous student and has been diligently taking notes [here](https://github.com/Studious-Notetaker/REPO-OF-EPICNESS).
