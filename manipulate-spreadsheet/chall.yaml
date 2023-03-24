@@ -1,0 +1,12 @@
+name: Manipulate Spreadsheet
+categories:
+  - misc
+value: 100
+flag: bcactf{goO913_shee75_i5_coOl_4wce98Nu}
+description: |-
+  They said the flag was in [this spreadsheet](https://docs.google.com/spreadsheets/d/10UYPl1kzuSTLJbN6kLkJR4aVFxo3nXUrKIiLLTQyOb8/), but it appears completely empty to me! Can you help me find it?
+hints:
+  - Make a copy of the spreadsheet first.
+authors:
+  - Michael
+visible: true
