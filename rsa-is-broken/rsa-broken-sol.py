@@ -7,9 +7,9 @@ c = 36750775360709769054416477187492778112181529855266342655304
 n = p * q
 e = 65537
 
-# the idea is that our retrieved m is in fact the original m mod n
-# so we add multiples of m to retrieve the flag
-# but this is inefficient
+# the idea is that our retrieved m is in fact equivalent to the original m mod n
+# so we add multiples of n to retrieve the flag
+# but this is inefficient so we have to narrow it down using format
 # The flag ends with }, so 7D = 125 mod 256
 d = pow(e, -1, math.lcm(p-1, q-1))
 m = pow(c, d, n)
