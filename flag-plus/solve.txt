@@ -1,0 +1,3 @@
+Send a HTTP request to flag.html with referer being "http://[host]/paid.html" 
+(instead of "http://[host]/free.html"). This is confirmed by the paid.html
+page 403ing. This can be done with any program that can send HTTP requests.
