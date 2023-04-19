@@ -1,0 +1,22 @@
+name: Interpreted Arduino I
+categories:
+  - rev
+value: 75
+flag: bcactf{h4rdW@r3_r3$Et?_!1y8fbr4eu}
+
+# flag:
+  # file: ./flag.txt
+
+description: |-
+  I created an Arduino simulator CLI you can interact with at runtime.
+  You can run it with code to start off, and then its built in interpreter will let you run code as you go.
+  It's supposed to print out the flag but it's not working. Can you help me figure out what's wrong?
+  
+hints:
+  - The flag was outputted but I think I missed it. Can you bring it back?
+files:
+  - src: ./main.ino
+authors:
+  - Mudasir Ali
+visible: true
+# TODO: deployment
