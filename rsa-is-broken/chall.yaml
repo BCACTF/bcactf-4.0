@@ -1,0 +1,16 @@
+name: RSA is broken
+categories:
+  - crypto
+value: 150
+flag: bcactf{o0p5_m3ssaGe_to0_b1g_nv93nd0}
+description: |-
+  Why isn't my RSA working??? All the math checks out. 
+  
+  Please help!!! I'll even give you my private key.
+hints:
+  - flag.txt has nothing except for the flag (which is formatted like any other one)
+files:
+  - src: ./rsa-broken.py
+authors:
+  - Marvin
+visible: true
