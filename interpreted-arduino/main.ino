@@ -1,6 +1,6 @@
 void setup() {
   Serial.begin(9600);
-  Serial.println("FLAG");
+  Serial.println("bcactf{REDACTED flag}");
 }
 
 void loop() {
