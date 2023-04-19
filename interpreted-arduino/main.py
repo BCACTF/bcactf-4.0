@@ -1,4 +1,5 @@
 from time import sleep
+import sys
 
 def setup():
     print("bcactf{h4rdW@r3_r3$Et?_!1y8fbr4eu}")
@@ -28,67 +29,71 @@ def main():
     
     command = ""
     while command != "exit":
-        command = input(">>> Enter a command:\n")
-        if command == "help":
-            print(welcome)
-            
-        elif command.startswith("press"):
-            button = command.split(" ")[1]
-            if button == "RESET":
-                print("(resetting...)")
-                sleep(1)
-                continue
-            pin = int(button)
-            if pins[pin]["type"] == "INPUT":
-                pins[pin]["val"] = 1
-                print(f"(turned on pin {pin})")
-            else:
-                print("not an input pin")
-
-        elif command.startswith("release"):
-            button = command.split(" ")[1]
-            if button == "RESET":
-                print("(successfully reset)")
-                setup()
-                break
-            pin = int(button)
-            if pins[pin]["type"] == "INPUT":
-                pins[pin] = 0
-                print(f"(turned off pin {pin})")
-        
-        elif command.startswith("set"):
-            pin = int(command.split(" ")[1])
-            mode = command.split(" ")[2]
-            if mode in ["INPUT","OUTPUT"]:
-                pins[pin]["type"] = mode
-            else:
-                print("(invalid mode)")
-
-        elif command.startswith("read"):
-            pin = int(command.split(" ")[1])
-            if pins[pin]["type"] == "INPUT" or pins[pin]["type"] == "OUTPUT":
-                print(f"(pin {pin} is {pins[pin]['val']})")
-            else:
-                print("(invalid pin)")
-
-        elif command.startswith("write"):
-            pin = int(command.split(" ")[1])
-            value = command.split(" ")[2]
-            if pins[pin]["type"] == "OUTPUT":
-                if value == "HIGH":
+        try:
+            command = input(">>> Enter a command:\n")
+            if command == "help":
+                print(welcome)
+                
+            elif command.startswith("press"):
+                button = command.split(" ")[1]
+                if button == "RESET":
+                    print("(resetting...)")
+                    sleep(1)
+                    continue
+                pin = int(button)
+                if pins[pin]["type"] == "INPUT":
                     pins[pin]["val"] = 1
-                elif value == "LOW":
-                    pins[pin]["val"] = 0
+                    print(f"(turned on pin {pin})")
                 else:
-                    print("(invalid value)")
-            else:
-                print("(not an output pin)")
+                    print("not an input pin")
 
-        elif command.startswith("print"):
-            print(command[6::])
-        
-        else:
-            print("invalid command")
+            elif command.startswith("release"):
+                button = command.split(" ")[1]
+                if button == "RESET":
+                    print("(successfully reset)")
+                    setup()
+                    break
+                pin = int(button)
+                if pins[pin]["type"] == "INPUT":
+                    pins[pin] = 0
+                    print(f"(turned off pin {pin})")
+            
+            elif command.startswith("set"):
+                pin = int(command.split(" ")[1])
+                mode = command.split(" ")[2]
+                if mode in ["INPUT","OUTPUT"]:
+                    pins[pin]["type"] = mode
+                else:
+                    print("(invalid mode)")
+
+            elif command.startswith("read"):
+                pin = int(command.split(" ")[1])
+                if pins[pin]["type"] == "INPUT" or pins[pin]["type"] == "OUTPUT":
+                    print(f"(pin {pin} is {pins[pin]['val']})")
+                else:
+                    print("(invalid pin)")
+
+            elif command.startswith("write"):
+                pin = int(command.split(" ")[1])
+                value = command.split(" ")[2]
+                if pins[pin]["type"] == "OUTPUT":
+                    if value == "HIGH":
+                        pins[pin]["val"] = 1
+                    elif value == "LOW":
+                        pins[pin]["val"] = 0
+                    else:
+                        print("(invalid value)")
+                else:
+                    print("(not an output pin)")
+
+            elif command.startswith("print"):
+                print(command[6::])
+            
+            else:
+                print("invalid command")
+        except Exception as e:
+            print("thou hath broken the simulator. please leave at once")
+            sys.exit(-1)
     
     print("Exiting Simulator...")
     sleep(1)
