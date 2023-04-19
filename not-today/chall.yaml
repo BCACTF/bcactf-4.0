@@ -11,8 +11,8 @@ description: |-
 hints:
   - Have you tried turning it off and on again?
   - Have you heard of a POST request?
-files:
 # if its too guessy, we can just give them the file
+# files:
   # - src: ./main.py
     # dest: server.py
 authors:
