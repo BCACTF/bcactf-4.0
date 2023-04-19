@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{today}}</title>
+</head>
+<body>
+    <div id="flag">
+        {{flag}}
+    </div>
+    <script>
+        const today = new Date();
+        // fetch the /api endpoint with a POST request. parameter date is the variable today
+        fetch('/api', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({date: today.toString()})
+        })
+        .then(response => response.json())
+        .then(data => {
+            // set the flag div to the flag variable
+            document.getElementById('flag').innerHTML = data.flag;
+        });
+
+    </script>
+</body>
+</html>
