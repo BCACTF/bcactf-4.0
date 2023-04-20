@@ -1,0 +1,18 @@
+name: Type Faster
+categories:
+  - web
+value: 75
+flag: bcactf{jU$7_g0_f4$t3r_u439rfdnh8s}
+description: |-
+  I'm storing some secret information on my website, but I realized I need an anti-captcha service.
+  I don't want any humans to gain these insights before the AI revolution, so I've drafted a system that only robots could beat.
+  I don't think any humans could type *this* fast!
+hints:
+  - Have you tried typing faster?
+  - You should read faster too.
+  - Perhaps look into the [JS Events API](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget)
+# consider adding ~ 25 points and removing the last hint
+authors:
+  - Mudasir Ali
+visible: true
+# TODO: deployment
