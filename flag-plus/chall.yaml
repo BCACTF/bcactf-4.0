@@ -2,7 +2,7 @@ name: Flag+
 categories:
   - webex
 value: 100
-flag: ctf{fl4g_r3ferr3d_gn3vhx75}
+flag: bcactf{fl4g_r3ferr3d_gn3vhx75}
 description: |-
   I've been trying to find a flag on this site,
   but it looks like you have to pay to get it...
