@@ -32,7 +32,7 @@ jobs:
       id: get_changed
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        ignore: "{/*/**,/.github**}"
+        ignore: "{*/**,.github,.github/**}"
         foldersOnly: true
         format: csv
     
