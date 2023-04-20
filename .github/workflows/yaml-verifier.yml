@@ -18,8 +18,9 @@ jobs:
     steps:
     - name: Check out repo
       uses: actions/checkout@v2
-      
-    - uses: actions-rs/toolchain@v1
+    
+    - name: Get rust toolchain
+      uses: actions-rs/toolchain@v1
       with:
         toolchain: stable
         
@@ -35,4 +36,4 @@ jobs:
         format: csv
     
     - name: Verify YAML
-    - run: /bin/bash -c "arcs-yaml-parser $(echo "${{ steps.get_changed.outputs.changed }}" | awk -F', ' '{ for( i=1; i<=NF; i++ ) printf "%s ", $i"/chall.yaml" }')"
+      run: /bin/bash -c "arcs-yaml-parser $(echo "${{ steps.get_changed.outputs.changed }}" | awk -F', ' '{ for( i=1; i<=NF; i++ ) printf "%s ", $i"/chall.yaml" }')"
