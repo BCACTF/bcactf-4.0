@@ -19,14 +19,15 @@ jobs:
     - name: Check out repo
       uses: actions/checkout@v2
       
-    - name: Install yaml verifier 
     - uses: actions-rs/toolchain@v1
       with:
         toolchain: stable
-    - run: cargo install --git https://github.com/BCACTF/arcs-yaml.git
+        
+    - name: Install yaml verifier 
+      run: cargo install --git https://github.com/BCACTF/arcs-yaml.git
     
     - name: Find changed 
-    - uses: Stockopedia/action-get-changed-files@v1
+      uses: Stockopedia/action-get-changed-files@v1
       id: get_changed
       with:
         ignore: "**/+(.github)"
