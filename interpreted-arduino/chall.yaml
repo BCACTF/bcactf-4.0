@@ -1,7 +1,7 @@
 name: Interpreted Arduino I
 categories:
   - rev
-value: 75
+value: 50
 flag: bcactf{h4rdW@r3_r3$Et?_!1y8fbr4eu}
 description: |-
   I created an Arduino simulator CLI you can interact with at runtime.
