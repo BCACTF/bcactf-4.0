@@ -13,14 +13,14 @@ e = 65537
 # The flag ends with }, so 7D = 125 mod 256
 d = pow(e, -1, math.lcm(p-1, q-1))
 m = pow(c, d, n)
-while m%256 != 125:
+while m % 256 != 125:
     m += n
 jump = n * 256
 # the flag starts with bcactf{
 # we essentially want to try one possible flag length at a time
-# by jumping up to the next one starting with bcactf 
+# by jumping up to the next one starting with bcactf
 # 0 is the smallest char (by code) that can appear in the flag
-target = b'bcactf{' + b'0'*math.floor(math.log(m,256)-7)
+target = b'bcactf{' + b'0'*math.floor(math.log(m, 256)-7)
 md = long_to_bytes(m)
 while re.fullmatch(b'[0-9a-zA-Z_{}]+', md) == None:
     if md[0:7] == b'bcactf{':
