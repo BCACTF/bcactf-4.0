@@ -6,6 +6,7 @@ def setup():
 
 def main():
     pins = [{"val":0,"type":None} for _ in range(14)]
+    reset = {"val":0,"type":"INPUT"}
     welcome = """
     hello. this is my arduino simulator (only digital pins supported). type one of the following commands to do stuff.
     help - shows this message
@@ -52,7 +53,7 @@ def main():
 
             elif command.startswith("release"):
                 button = command.split(" ")[1]
-                if button == "RESET":
+                if button == "RESET" and reset["val"] == 1:
                     print("(successfully reset)")
                     setup()
                     break
