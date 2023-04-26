@@ -1,20 +1,16 @@
 name: Not Today
 categories:
   - webex
-value: 50
+value: 75
 flag:
   file: ./flag.txt
 description: |-
-  This website gives you the flag sometimes. When it feels like it. In a special time zone
+  This website gives you the flag sometimes. When it feels like it. In a special time zone.
   Time Zone: `GMT+∀ (BCA Special Time)`
   Date Time: `Wed Jun 07 2023 06:09:42`
 hints:
   - Have you tried turning it off and on again?
   - Have you heard of a POST request?
-# if its too guessy, we can just give them the file
-# files:
-  # - src: ./main.py
-    # dest: server.py
 authors:
   - Mudasir Ali
 visible: true
