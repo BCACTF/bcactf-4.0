@@ -1,0 +1,15 @@
+name: Discord 2
+categories:
+  - misc
+value: 75
+flag: bcactf{ferougnj8fdv8h5xc8yvshvx8fjvsojiovglrfgxcb8vh3t}
+description: |-
+  I thought the Discord challenge was too easy, so I
+  buffed it with a bot. [Link](https://discord.gg/75kPh6JnJk)
+hints:
+  - The names of channels you can see with no roles are cached somewhere
+  - How can you interact with a Discord bot without messages/slash commands?
+authors:
+  - Marvin
+visible: true
+# TODO: deploy bot with `node bot.js` (also give the token)
