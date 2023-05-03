@@ -12,3 +12,4 @@ hints:
 authors:
   - Marvin
 visible: true
+# TODO: deploy bot with `node bot.js` (also give the token)

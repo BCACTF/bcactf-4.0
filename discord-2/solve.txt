@@ -5,6 +5,9 @@ no roles can see; this is why you can see them for a brief
 second when joining (since the bot has to give you the
 no_flag1_for_you role).
 
+Or: you can just write a js script to capture the channel
+names as they load on the browser version of Discord.
+
 Part 2: You can't send messages and there are no slash
 commands, but you can still interact with the bot using 
 context menu (right click) interactions. You can discover
