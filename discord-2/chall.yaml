@@ -1,0 +1,14 @@
+name: Discord 2
+categories:
+  - misc
+value: 75
+flag: bcactf{ferougnj8fdv8h5xc8yvshvx8fjvsojiovglrfgxcb8vh3t}
+description: |-
+  I thought the Discord challenge was too easy, so I
+  buffed it with a bot. [Link](https://discord.gg/75kPh6JnJk)
+hints:
+  - [FIXME unsure yet]
+  - How can you interact with a Discord bot without messages/slash commands?
+authors:
+  - Marvin
+visible: true
