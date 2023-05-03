@@ -2,7 +2,8 @@ name: Type Faster
 categories:
   - web
 value: 75
-flag: bcactf{jU$7_g0_f4$t3r_u439rfdnh8s}
+flag: 
+  file: flag.txt
 description: |-
   I'm storing some secret information on my website, but I realized I need an anti-captcha service.
   I don't want any humans to gain these insights before the AI revolution, so I've drafted a system that only robots could beat.

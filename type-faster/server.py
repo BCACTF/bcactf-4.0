@@ -1,25 +1,46 @@
+import random
 from flask import Flask, render_template, request, redirect, url_for, session
+import json
 
-app = Flask("type-faster")
+app = Flask("type-faster", static_url_path='', static_folder='static',)
+start_time = None
+flag_f = open("flag.txt", "r")
+flag = flag_f.read()
+flag_f.close()
+
+WORD_COUNT = 75
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    word_file = open("words.txt", "r")
+    words = word_file.read().split("\n")
+    word_list = [words[random.randint(0, len(words) - 1)] for i in range(WORD_COUNT)]
+    return render_template("index.html", words=" ".join(word_list))
 
 @app.route("/times", methods=["POST"])
 def times():
-    if request.headers["Content-Type"] == "text/event-stream":
-        with open("times.txt", "a") as f:
-            pass
-    # read the file
+    global start_time
+    if "start_time" in request.data.decode("utf-8"):
+        start_time = int(json.loads(request.data.decode("utf-8"))["start_time"])
+        print(start_time)
+        return "ok"
+    elif "end_time" in request.data.decode("utf-8"):
+        end_time = int(json.loads(request.data.decode("utf-8"))["end_time"])
+        print(end_time)
+        diff = end_time - start_time
+        print(diff)
+        if diff <= 5000:
+            return {"flag": flag}
+        
+        return {"status": diff}
+    else:
+        return {"status": "error"}
 
-    # write the file to the response
-    # add a route
-    #check the headers for the event type
-    # check the event type
-    # write the 'start_time' header to a new file with the name by the user id
-    #open the file with the user id
+@app.errorhandler(404)
+@app.errorhandler(500)
+@app.route("/<path:path>")
+def page_not_found(e=None):
+    return render_template('404.html'), 404
 
-    # check time difference to be less than 5 seconds
-
-    # send the flag if it is less than 5 seconds
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=9023)
