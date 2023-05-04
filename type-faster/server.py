@@ -23,7 +23,7 @@ def times():
     if "start_time" in request.data.decode("utf-8"):
         start_time = int(json.loads(request.data.decode("utf-8"))["start_time"])
         print(start_time)
-        return "ok"
+        return {"status": "ok"}
     elif "end_time" in request.data.decode("utf-8"):
         end_time = int(json.loads(request.data.decode("utf-8"))["end_time"])
         print(end_time)
