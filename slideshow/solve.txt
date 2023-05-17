@@ -1,0 +1,7 @@
+Some investigation will show that the weird 3D model is a
+solid of revolution (made in LibreOffice with Convert > To
+3D Rotation Object). It is tedious but possible to get the
+characters of the flag one at a time by investigating each
+part of it, but extracting the contents.xml file (since a
+.odp is just a zip) gives you the SVG paths for each
+character.W

@@ -1,0 +1,12 @@
+name: Slideshow
+categories:
+  - foren
+value: 50
+flag: bcactf{pR353ntaT10n_cR4cK3D}
+description: |-
+  Somehow I really messed up this presentation I was working on. Can you help?
+files:
+  - src: ./slideshow.odp
+authors:
+  - Marvin
+visible: true
