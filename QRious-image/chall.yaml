@@ -1,0 +1,16 @@
+name: QRious Image
+categories:
+  - rev
+value: 125
+flag:
+  file: ./flag.txt 
+description: |-
+  I found this weird QR code in my files, but it won't scan.
+hints:
+  - How do QR codes account for malformed or missing data?
+files:
+  - src: ./qr.png
+authors:
+  - Mudasir Ali
+visible: true
+# TODO: deployment
