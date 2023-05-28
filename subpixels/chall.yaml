@@ -1,0 +1,16 @@
+name: Subpixels
+categories:
+  - foren
+value: 100
+flag:
+  file: ./flag.txt
+description: |-
+  I found this really cool picture online!
+hints:
+  - Don't be discouraged if what you end up with
+    doesn't look like the flag without modification
+files:
+  - src: ./subpixels.png
+authors:
+  - Marvin
+visible: true
