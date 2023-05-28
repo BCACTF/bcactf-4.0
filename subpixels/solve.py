@@ -14,8 +14,8 @@ for r in range(1498):
 # the channel that differs is R if the coordinate is 0 mod
 # 3, G if the coordinate is 1 mod 3, B if the coordinate is
 # 2 mod 3 (essentially, the channel used cycles between
-# R, G, B, R, G, B, etc) - notice with e.g. the 18th
-# through 23rd pixels changing RGBRGB
+# R, G, B, R, G, B, etc) - notice with e.g. pixels 18
+# through 23 changing RGBRGB
 # Also, the differences stop at around the 256th pixel,
 # which is a nice round multiple of 8.
 # So we extract the LSBs
