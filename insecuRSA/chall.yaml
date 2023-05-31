@@ -1,0 +1,17 @@
+name: InsecuRSA
+categories:
+  - crypto
+value: 225
+flag: bcactf{r54_15nt_4lw4ys_5ecu43_40fh8}
+description: |-
+  RSA, created in 1977 by Ron Rivest, Adi Shamir, and Leonard Adleman, is the most advanced and secure encryption algorithm currently existing.
+  Jk. 
+  What's wrong with this iteration?
+hints:
+  - There are many common exploits for RSA that use factoring.
+  - What can cause a public key to be easily factored?
+files:
+  - src: ./flag.enc
+authors:
+  - Zsofia
+visible: true
