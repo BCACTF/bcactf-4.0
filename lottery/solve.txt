@@ -1,1 +1,6 @@
-TODO
+- JWT secret is given so we can spoof the token
+- Thanks to ?., "req.data?.tickets?.indexOf(winner)" will 
+  be undefined if data does not have a tickets property
+- undefined != -1
+- So, if we just remove the tickets property and create a
+  new JWT we are done.
