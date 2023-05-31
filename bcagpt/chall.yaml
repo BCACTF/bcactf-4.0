@@ -1,0 +1,17 @@
+name: BCAGPT
+categories:
+  - web
+value: 75
+flag:
+  file: ./f/l/a/g/flag.txt
+description: |-
+  OpenAI API credits are really expensive, so I decided to make my own large language model.
+  I told it the flag, but it promised it won't tell you.
+hints:
+  - trust me we use powerful ✨AI✨ and ✨machine learning algorithms✨
+files:
+  - src: ./server.js
+authors:
+  - Mudasir
+visible: true
+# TODO: deployment
