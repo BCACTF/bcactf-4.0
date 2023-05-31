@@ -20,6 +20,13 @@ window.addEventListener('load', function () {
 
 typer.onkeyup =  async (e)=>{
     let text = e.target.value;
+    let keyPressed = {
+        key: e.key,
+        location: e.location,
+        when: new Date().getTime(),
+        more: e.detail,
+    };
+    console.log(keyPressed);
     document.getElementById('prompt').innerHTML = highlight(text, document.getElementById('prompt').dataset.prompt);
     
     if (text.trim() == document.getElementById('prompt').dataset.prompt.trim()) {
@@ -41,6 +48,18 @@ typer.onkeyup =  async (e)=>{
         alert('done');
         typer.onkeyup = null;
         
+    } else {
+        await fetch('/times', {
+            method: 'POST',
+            body: JSON.stringify({
+                event: keyPressed,
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(function (response) {
+            return response.json();
+        })
     }
 }
 
