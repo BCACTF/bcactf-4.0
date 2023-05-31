@@ -8,6 +8,8 @@ description: |-
   Play the BCACTF Lottery! Can you beat the odds?
 authors:
   - Marvin
+files:
+  - src: ./lottery.zip
 deploy:
   web:
     build: .
