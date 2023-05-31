@@ -1,0 +1,15 @@
+name: cut-gif
+categories:
+  - foren
+value: 50
+flag: bcactf{nic3_uncr0p_grkjhtlkw}
+description: |-
+  I found this really funny meme but
+  I think the second panel is missing.
+  :(
+hints:
+files:
+  - src: ./chall.gif
+authors:
+  - Matthew Specht
+visible: true
