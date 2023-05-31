@@ -1,0 +1,7 @@
+Ok, so you know how Huffman Coding uses nodes with 2 children?
+Naturally, Huffffman Coding will then use nodes with 4 children.
+This changes the process for reading the encoded trie, as it will have 4 things instead of 2.
+And then in the encodings, each direction will be represented as 2 bits, going 00, 01, 10, 11.
+
+The script I used to make this is basically the entire Huffman lab with a few modifications.
+Wasn't sure if I should put all of that in here, but I could if you want.

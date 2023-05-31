@@ -12,7 +12,7 @@ hints:
   - Most of the process will be the same, but there are important differences.
   - It seems like Huffman has 2, but Huffffman had 4.
 files:
-  - src: ./story.txt
+  - src: ./story.txt.enc
 authors:
   - Jeremy Lee
 visible: true
