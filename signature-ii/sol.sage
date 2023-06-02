@@ -33,8 +33,8 @@ s3 = 238353596186904342726878869981624404566377276626701828108643282926988767695
 key1 = mod((z1-z2)/(s1-s2),o) # k = (z-z')/(s-s')
 key2 = mod((s1*key1-z1)/r,o) # private key dA = (sk-z)/r
 
-# now with both keys, we know s = k^-1(z+rdA)
-# and just need to solve for z.
+# now with both "keys" (k = key1 obviously is not actually one), we know 
+# s = k^-1(z+rdA) and just need to solve for z.
 # sk = z + rdA, so z = sk - rdA
 ans = s3 * key1 - r * key2
 print(long_to_bytes(int(ans)))
