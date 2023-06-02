@@ -1,4 +1,4 @@
-[
+export default [
     {
         "name": "Flip",
         "path": "clubpenguin.png",

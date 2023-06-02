@@ -1,6 +1,6 @@
 import WebSocket from 'ws';
 import { qReader, qWriter } from './bin.js';
-import definitions from "./definition.json" assert { type: "json" };;
+import definitions from "./definition.js";
 import { qcrypt } from './crypt.js';
 
 const MAX_SPEED = 40;

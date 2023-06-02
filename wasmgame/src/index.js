@@ -57,10 +57,10 @@ const wss = new WebSocketServer({
     maxPayload: 256, // change if adding captcha
     path: '/super',
     server
-}, () => {
-    console.log(`Listening on port ${PORT} at ${wss.address}`);
 });
 
 wss.on("connection", game.client)
 
-server.listen(PORT, "0.0.0.0")
+server.listen(PORT, "0.0.0.0", () => {
+    console.log(`Listening on port ${PORT} at ${server.address().address || server.address()}`);
+})
