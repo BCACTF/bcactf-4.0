@@ -1,0 +1,14 @@
+name: Studious Notetaking
+categories:
+  - misc
+value: 100
+flag: bcactf{a++_FOr_nOtE7ak1N9}
+description: |-
+  My good friend is an assiduous student and has been diligently taking notes [here](https://github.com/Studious-Notetaker/REPO-OF-EPICNESS).
+  I don't see his notes! Do you?
+hints:
+  - GitHub won't be useful here. Clone the repository using git and have a look around.
+authors:
+  - Puhalenthi
+  - Thomas
+visible: true
