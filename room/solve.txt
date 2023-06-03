@@ -1,0 +1,2 @@
+Probably many ways to solve this but easiest is probably decompile game, extract each of the models for the flag's letters and the GameObject's positions and then reconstruct them in the Unity editor.
+Could also swap wall textures to be transparent
