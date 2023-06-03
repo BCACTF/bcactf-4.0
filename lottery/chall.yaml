@@ -9,7 +9,7 @@ description: |-
 authors:
   - Marvin
 files:
-  - src: ./lottery.zip
+  - src: ./server/app.js
 deploy:
   web:
     build: .
