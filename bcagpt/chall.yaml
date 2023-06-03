@@ -1,6 +1,6 @@
 name: BCAGPT
 categories:
-  - web
+  - webex
 value: 75
 flag:
   file: ./f/l/a/g/flag.txt
