@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottery</title>
+    <style>
+        body {
+            font-family: 'Roboto', 'Helvetica', 'Arial', 'sans-serif';
+        }
+
+        body:before {
+            background-image: url("static/bg.jpg");
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: .4;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to the BCACTF Lottery!</h1>
+    <h2>Register or log in below for your FIVE free lottery tickets!</h2>
+    <h2>Your tickets will be checked against the secret winning number.</h2>
+    <h2>The grand prize is a shiny flag!</h2>
+    <form action="/" method="POST">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username">
+        <button type="submit">Access account</button>
+    </form>
+    <h4>Reminder: Please do not brute force hosted challenges.</h4>
+</body>
+
+</html>
