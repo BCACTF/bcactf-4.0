@@ -49,6 +49,8 @@ class Ball {
             const ang = Math.atan2(this.y, this.x);
             this.x = Math.cos(ang) * (MAPR - this.r);
             this.y = Math.sin(ang) * (MAPR - this.r);
+            this.vx *= 0.1;
+            this.vy *= 0.1;
         }
     }
 
