@@ -11,6 +11,7 @@ hints:
   - trust me we use powerful ✨AI✨ and ✨machine learning algorithms✨
 files:
   - src: ./server.js
+  - src: ./query/train_train.sql
 authors:
   - Mudasir
 visible: true

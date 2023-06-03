@@ -41,6 +41,7 @@ input[type="text"] {
 button[type="submit"] {
     display: inline-block;
     width: 3vw;
+    min-width: 30px;
     padding: 1%;
     border-radius: 50%;
     border: 1px solid #663399;
@@ -51,4 +52,26 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #9058c8;
+}
+
+.conversation {
+    font-family: "Inter", sans-serif;
+}
+
+.you {
+    text-align: left;
+    border-radius: 20px;
+    background-color: #769f92;
+    width: max-content;
+    max-width: 97%;
+    padding: 1vh 1vw;
+}
+
+.BCAGPT {
+    border-radius: 20px;
+    background-color: #43d633;
+    width: max-content;
+    max-width: 97%;
+    padding: 1vh 1vw;
+    margin-left: auto;
 }

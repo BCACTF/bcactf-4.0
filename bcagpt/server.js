@@ -13,7 +13,7 @@ const app = express();
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/pages');
 app.use(express.static(__dirname + '/public'));
-const jsonParser = bodyParser.json();
+
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 let db;
@@ -44,17 +44,18 @@ app.get('/', async (req, res) => {
 });
 
 app.post('/ai', urlencodedParser, (req, res) => {
-    let msgs = [{author: 'you', msg: req.body.query ?? 'No query found'}];
-    let kwds = " " + req.body.query ?? '%';
+    let kwds = req.body.query ?? '%';
+    let msgs = [{author: 'you', message: kwds=="%" ? 'No query found' : kwds}];
+    
     db.serialize(() => {
-        db.get(`SELECT response_text FROM response WHERE SUBSTR(response_keywds,1,1) like SUBSTR('${kwds}',1,1) LIMIT 1`, (err, row) => {
+        db.get(`SELECT response_text FROM response WHERE response_keywds !='${kwds}' ORDER BY resp_order, RANDOM() LIMIT 1`, (err, row) => {
             if (err) {
                 console.error(err.message);
                 res.render('index', {error: err.message});
             } else {
-                resp = row.response_text.replace("{}",req.body.query) ?? "AI brain overheated";
-                msgs.push({author: 'ai', message: resp});
-                console.log(msgs);
+                let resp = row?.response_text?.replace("{}",req.body.query) ?? "AI brain overheated";
+                msgs.push({author: 'BCAGPT', message: resp});
+                
                 res.render('index', {
                     messages: msgs
                 });

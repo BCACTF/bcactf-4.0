@@ -1,1 +1,0 @@
-SELECT response_text from response where resp_id = ?;
