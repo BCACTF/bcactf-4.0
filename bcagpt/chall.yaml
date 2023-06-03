@@ -10,9 +10,12 @@ description: |-
 hints:
   - trust me we use powerful ✨AI✨ and ✨machine learning algorithms✨
 files:
-  - src: ./server.js
-  - src: ./query/train_train.sql
+  - src: ./server/server.js
+  - src: ./server/query/train_train.sql
 authors:
   - Mudasir
+deploy:
+  web:
+    build: .
+    expose: 31571/tcp
 visible: true
-# TODO: deployment
