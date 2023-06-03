@@ -1,7 +1,7 @@
 name: Room
 categories:
   - rev
-value: 200
+value: 175
 flag: bcactf{gr34T_3sC4P3_5jHpQcZ}
 description: |-
   This is a cool room! I wonder what could be outside though. Probably nothing important.
