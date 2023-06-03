@@ -1,0 +1,17 @@
+name: Signature II
+categories:
+  - crypto
+value: 175
+flag: 
+  file: ./flag.txt
+description: |-
+  I recently implemented this new signing algorithm! Can you recover the flag?
+hints:
+  - This is a specific standard algorithm (modified to have several security vulnerabilities)
+  - Wikipedia will help
+files:
+  - src: ./signature-ii.sage
+  - src: ./signature-ii-log.txt
+authors:
+  - Marvin
+visible: true
