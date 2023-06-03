@@ -1,0 +1,13 @@
+name: Suzanne
+categories:
+  - foren
+value: 200
+flag: bcactf{b13nD3R_m0nK3Y_5hifHJf}
+description: |-
+  Monkey. Different monkey? Original monkey?
+files:
+  - src: ./suzanne_original.fbx
+  - src: ./suzanne_different.fbx 
+authors:
+  - Krish
+visible: true
