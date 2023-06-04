@@ -30,7 +30,7 @@ def checkValidPassWord(hashType, salt, hash, password):
   if (accountName.startswith("root")):
     actualAccountName = "root"
   else:
-    actualAccountName = accounts[:6]
+    actualAccountName = accountName[:6]
   
   if (accounts[actualAccountName] == password):
     if actualAccountName == "jonwil":
