@@ -6,7 +6,6 @@ int main() {
     string flag;
     std::cin >> flag;
     string scrambled = "";
-    std::cout << flag << endl;
     while (flag.size() > 0) {
         char c = flag.at(flag.size()/2);
         scrambled.push_back(c);
