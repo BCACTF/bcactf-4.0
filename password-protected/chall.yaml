@@ -1,0 +1,16 @@
+name: Password Protected
+categories:
+  - rev
+value: 100
+flag: 
+  file: ./flag.txt
+description: |-
+  Can you help log Jon Wilkie back into his account?
+hints:
+  - Can you see what is inside the shadow?
+  - Have you heard of RockYou?
+files:
+  - src: ./password_protected.py
+authors:
+  - Jack
+visible: true
