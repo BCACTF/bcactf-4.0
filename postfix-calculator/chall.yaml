@@ -1,0 +1,17 @@
+name: Postfix Calculator
+categories:
+  - rev
+value: 50
+flag: 
+  file: ./flag.txt
+description: |-
+  Mr. Wang left some tricks behind in his Intro to CS labs before leaving BCA. Can you use the Postfix lab to get the flag?
+hints:
+  - What are some exploitable Python functions to avoid?
+  - Maybe brush up on the os library.
+files:
+  - src: ./PostfixCalculator.py
+authors:
+  - Parth
+visible: true
+# Needs docker file
