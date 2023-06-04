@@ -1,8 +1,6 @@
-from pypdf import PdfReader, PdfWriter
+from pdfreader import PDFDocument
 
-reader = PdfReader('SecretFacilityAccess.pdf')
-
-writer = PdfWriter()
-writer.add_page(reader.pages[0])
-writer.remove_annotations('/Square')
-writer.write('Unredacted.pdf')
+with open('SecretFacilityAccess.pdf', 'rb') as file:
+    pdf = PDFDocument(file)
+    page = next(pdf.pages())
+    page.Resources.XObject['Im1'].to_Pillow().save('Unredacted.png')
