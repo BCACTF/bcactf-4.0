@@ -12,3 +12,5 @@ files:
 authors:
   - Jacob
 visible: true
+# TODO: deployment
+# run scrambledFlag.cpp on through netcat with flag.txt so the code works **please**!
