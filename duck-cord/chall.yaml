@@ -1,0 +1,21 @@
+name: duck-cord
+categories:
+  - binex
+value: 100
+flag:
+  file: ./flag.txt
+description: |-
+  The ducks and I have been working on our latest communications app: `Duck Cord`
+  It's more duck-focussed than other communication apps these days...
+
+hints:
+  - Can you access the hidden system messages
+# deploy:
+#   nc:
+#     build: .
+#     expose: 9999/tcp
+files:
+  - src: ./provided.c
+authors:
+  - Andrew
+visible: true
