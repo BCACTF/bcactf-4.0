@@ -5,6 +5,3 @@ characters of the flag one at a time by investigating each
 part of it, but extracting the contents.xml file (since a
 .odp is just a zip) gives you the SVG paths for each
 character.
-
-Note: It seems MS PowerPoint doesn't show the model, only
-LibreOffice.

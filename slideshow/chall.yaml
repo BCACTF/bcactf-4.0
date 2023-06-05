@@ -1,10 +1,12 @@
 name: Slideshow
 categories:
   - foren
-value: 50
+value: 125
 flag: bcactf{pR353ntaT10n_cR4cK3D_c8FjE8v}
 description: |-
   Somehow I really messed up this presentation I was working on. Can you help?
+
+  Note: PowerPoint does not load the file correctly; LibreOffice Impress does, but neither are required to solve the challenge.
 files:
   - src: ./slideshow.odp
 authors:
