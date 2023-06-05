@@ -9,7 +9,7 @@ flag_f = open("flag.txt", "r")
 flag = flag_f.read()
 flag_f.close()
 
-WORD_COUNT = 3
+WORD_COUNT = 75
 chars_inp = []
 timeses = []
 
