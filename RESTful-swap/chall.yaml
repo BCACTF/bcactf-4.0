@@ -14,3 +14,8 @@ hints:
 authors:
   - Mudasir
 visible: true
+visible: true
+deploy:
+  web:
+    build: .
+    expose: 5000/tcp
