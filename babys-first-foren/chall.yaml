@@ -1,0 +1,12 @@
+name: Baby's First Foren
+categories:
+  - foren
+value: 50
+flag: bcactf{i_h0P3_y0u_leaRN3d_s0m3th1nG_b9cvG8nf}
+description: |-
+  I found this beginner's guide to forensics.
+files:
+  src: ./babys-first-foren.png
+authors:
+  - Marvin
+visible: true

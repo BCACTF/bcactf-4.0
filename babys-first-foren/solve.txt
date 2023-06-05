@@ -1,0 +1,12 @@
+- Use exiftool or something similar to extract the first 
+  part of the flag in the author field: bcactf{i_h0P3_y0u_
+- Use binwalk or examine the file with a hex editor to
+  retrieve the embedded zip file, containing a text file
+  with some filler text and then leaRN3d_s0m3th1nG_.
+- Use zsteg or something similar to extract the final part
+  of the flag encoded in the least significant bits:
+  b9cvG8nf}.
+
+Actually, zsteg basically solves the entire thing:
+it shows the author field in the metadata, the LSB part,
+and the zip archive data.
