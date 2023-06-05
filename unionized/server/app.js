@@ -1,7 +1,7 @@
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose()
 const app = express();
-const port = 8080;
+const port = 24251;
 
 app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
@@ -64,5 +64,5 @@ app.post('/', (req, res) => {
 } );
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`Listening at http://localhost:${port}`);
 });

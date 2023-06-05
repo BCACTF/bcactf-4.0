@@ -1,4 +1,4 @@
 the search form has a basic SQLI vunerability so the user can access data from the entire database
-find the hidden table and its column names using the input "' UNION select sql FROM sqlite_schema --'"
-using the information from the previous query, the user can now use the input "' UNION SELECT unkn0wn FROM mystery--" 
+find the hidden table and its column names using the input `' UNION select sql FROM sqlite_schema --'`
+using the information from the previous query, the user can now use the input `' UNION SELECT unkn0wn FROM mystery--`
 the flag should now show up in the list of school names
