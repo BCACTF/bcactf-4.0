@@ -1,6 +1,6 @@
 name: Type Faster
 categories:
-  - web
+  - webex
 value: 75
 flag: 
   file: flag.txt
@@ -11,9 +11,8 @@ description: |-
 hints:
   - Have you tried typing faster?
   - You should read faster too.
-  - Perhaps look into the [JS Events API](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget)
-# consider adding ~ 25 points and removing the last hint
+  - Don't mess up.
 authors:
-  - Mudasir Ali
+  - Mudasir
 visible: true
 # TODO: deployment

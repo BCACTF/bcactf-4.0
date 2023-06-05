@@ -24,7 +24,7 @@ h1 {
     user-select: none;
 }
 
-form {
+.form {
     background-color: rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
     padding: 1.5rem;
@@ -37,9 +37,14 @@ form {
     align-items: center;
 }
 
-textarea {
+#typewriter {
     resize: none;
     font-size: x-large;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 3rem 1rem;
+    width: 95%;
+    color: #000;
 }
 
 .right {
