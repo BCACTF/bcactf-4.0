@@ -16,5 +16,10 @@ files:
 authors:
   - Mudasir Ali
 visible: true
+deploy:
+  nc:
+    build: .
+    expose: 9999/tcp
+
 # TODO: deployment
 # run main.py through netcat por favor 🥺
