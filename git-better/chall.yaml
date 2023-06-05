@@ -48,4 +48,10 @@ deploy:
     build: .
     expose: 8080/tcp
 
+
+files:
+  - src: /app/lost_block.txt
+    dest: lost_block
+    container: web
+
 visible: true

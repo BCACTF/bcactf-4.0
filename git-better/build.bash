@@ -23,6 +23,7 @@ rm ./temp/base/hashing1.ts ./temp/base/hashing2.ts
 # Calculate and interpolate the generated repository
 echo "Prebuilding repository"
 USE_PRESETS=true npx ts-node ./temp/chall/gen_export.ts > ./temp/prebuilt.js
+USE_PRESETS=true npx ts-node ./temp/chall/gen_export_block.ts > ./lost_block.txt
 
 echo "Formatting prebuilt data"
 echo 'const recievedBlocks: [bigint, string][] = ' "$(cat ./temp/prebuilt.js)" ';' > ./temp/prebuilt.js
