@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Search</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Find your school</h1>
+        <div>
+            <form method="POST" action="/" id = "Search" class="search">
+                <input name="keyword" id="keyword" type="text" class="searchTerm" placeholder="School name">
+                <button type = "submit" class="searchButton"><i class="material-icons">search</i></button>
+            </form>
+        </div>
+        <div>
+            <ul>
+                <% for (let i = 0; i < results.length; i++) { %>
+                    <li><%= results[i].name %></li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
