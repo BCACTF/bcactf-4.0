@@ -43,6 +43,7 @@ app.get('/', async (req, res) => {
     res.render('index');
 });
 
+app.get('/css/style.css', (req, res) => {res.sendFile(__dirname + '/css/style.css');});
 app.post('/ai', urlencodedParser, (req, res) => {
     let kwds = req.body.query ?? '%';
     let msgs = [{author: 'you', message: kwds=="%" ? 'No query found' : kwds}];
