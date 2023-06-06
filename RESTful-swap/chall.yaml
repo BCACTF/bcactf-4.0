@@ -14,7 +14,6 @@ hints:
 authors:
   - Mudasir
 visible: true
-visible: true
 deploy:
   web:
     build: .
