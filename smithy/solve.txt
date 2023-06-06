@@ -1,0 +1,2 @@
+uses the Coppersmith method to factor insecure N. 
+i think rsatools on github has a solver for it
