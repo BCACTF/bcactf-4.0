@@ -21,15 +21,10 @@ for r in range(1498):
 # So we extract the LSBs
 bits = ''.join([str(new[i][i][i%3]%2) for i in range(256)])
 print(bits)
-# Unfortunately, this isn't directly the flag
+# This looks like the flag
 # For readability let's split it into bytes
 _bytes = re.findall('.{8}', bits)
 print('\n'.join(_bytes))
-# Interesting, we have a bunch of ...001 at the end
-# Remembering that lowercase letters start with 011 in
-# their binary representation, we suspect that the binary
-# is reversed and inverted. So we rectify this
-chars = [chr(255-int("0b"+byte[::-1],2)) for byte in _bytes]
+# And convert to ASCII
+chars = [chr(int("0b"+byte,2)) for byte in _bytes]
 print(''.join(chars))
-# This is the flag backwards! (it ends with {ftcacb)
-print(''.join(chars[::-1]))
