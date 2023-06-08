@@ -36,6 +36,10 @@ const createBinexDocker = async (chall) => {
         srcFile = await input.text("new src file? ", { default: 'src.c' });
     }
     const outFile = await input.text("out file? ", { default: 'chall' });
+    let uploadOut = false;
+    if (await input.confirm("Do you want to upload the output file to the public?")) {
+        uploadOut = true;
+    }
     const buildArgs = await input.text("build args? ");
 
     copyFileSync(join(__dirname, "./ynetd"), join(chall.path, "./ynetd"));
@@ -73,7 +77,14 @@ CMD ./ynetd -p 9999 ./${outFile}`);
     delete challMeta.dir;
 
     challMeta.deploy = {nc: {build: ".", expose: "9999/tcp"}};
-
+    if (uploadOut) {
+        if (!challMeta.files) challMeta.files = [];
+        challMeta.files.push({
+            src: "/home/ctf/" + outFile,
+            dest: outFile,
+            container: "nc"
+        });
+    }
     writeFileSync(join(chall.path, "chall.yaml"), stringify(challMeta));
 
     console.log(chalk.gray("[!] Modified chall yaml"));
