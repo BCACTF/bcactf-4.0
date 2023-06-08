@@ -1,2 +1,2 @@
-uses the Coppersmith method to factor insecure N. 
-i think rsatools on github has a solver for it
+uses the Coppersmith method to factor insecure N.
+coppersmith uses a lattice attack to exploit public keys with a significant amount of contiguous zeroes

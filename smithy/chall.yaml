@@ -9,6 +9,7 @@ description: |-
   Unfortunately, he accidentally gave me a public key instead of a private key, and now I can't access my sword. 
 hints:
   - Could there be something wrong with the public key?
+  - Why are there so many A's???
 authors:
   - Zsofia
 visible: true
