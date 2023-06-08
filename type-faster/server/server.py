@@ -14,7 +14,7 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
-WORD_COUNT = 3
+WORD_COUNT = 70
 
 @app.route("/")
 def index():
