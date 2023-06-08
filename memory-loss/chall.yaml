@@ -11,7 +11,7 @@ description: |-
 
   I was thinking of the flag.. I think?
 hints:
-  - Is memory really lost?
+  - Is memory really lost? How does malloc make things fast
 authors:
   - Andrew
 visible: true
