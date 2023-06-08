@@ -1,0 +1,15 @@
+FROM python:3.11-slim-bullseye
+WORKDIR /app
+
+# Install dependencies
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
+
+# Copy over everything else
+COPY . .
+# cd into the server folder
+WORKDIR /app/server
+
+# Run the server!
+EXPOSE 5000
+CMD [ "python3", "./server.py"]
