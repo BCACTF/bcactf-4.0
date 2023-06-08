@@ -1,0 +1,17 @@
+name: Golfers
+categories:
+  - rev
+value: 125
+flag: bcactf{w0W_g0LF1nG_l4nG5_sur3_4r3_C0mpl3x_v4fnBx7}
+description: |-
+  I found this funny little programming language
+  online. I didn't really understand but apparently
+  golfers use it or something? 
+hints:
+  - The file extension hints at the programming language
+files:
+  - src: ./golfers.vyx
+  - src: ./golfers.out
+authors:
+  - Marvin
+visible: true

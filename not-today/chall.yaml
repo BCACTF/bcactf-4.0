@@ -4,9 +4,12 @@ categories:
 value: 75
 flag:
   file: ./flag.txt
-description: |-
-  This website gives you the flag sometimes. When it feels like it. In a special time zone.
+description: >-
+  This website gives you the flag sometimes. When it feels like it. In a special
+  time zone.
+
   Time Zone: `GMT+∀ (BCA Special Time)`
+
   Date Time: `Wed Jun 07 2023 06:09:42`
 hints:
   - Have you tried turning it off and on again?
@@ -14,4 +17,7 @@ hints:
 authors:
   - Mudasir Ali
 visible: true
-# TODO: deployment
+deploy:
+  web:
+    build: .
+    expose: 5000/tcp

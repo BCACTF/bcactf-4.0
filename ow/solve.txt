@@ -1,0 +1,15 @@
+All the background noise is audible through
+both left and right channels, but the flag
+audio is mostly coming through the left ear.
+A sound wave will cancel with itself when
+inverted (destructive interference), so
+split the stereo audio into left and right
+tracks and invert the right track. Then
+playing both simultaneously (through both
+tracks) will leave only the flag.
+
+(In Audacity: Right click track on left > 
+Split Stereo Track, move both tracks' 
+position from 100% Left/100% Right to 
+Centre, select right track and Effect > 
+Special > Invert, play)

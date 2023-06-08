@@ -1,0 +1,4 @@
+Each piece in chess has a certain value.
+Summing the values of all the pieces in a certain FEN position gives a number
+that can be turned into a char through ASCII.
+And then all of those characters together give the flag.

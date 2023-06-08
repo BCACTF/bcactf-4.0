@@ -1,0 +1,21 @@
+name: Here's my Hamsta
+categories:
+  - binex
+value: 50
+flag:
+  file: ./flag.txt
+description: |-
+  I forgot the flag, yet, somehow my hamster remembers it.
+  The further he runs, the more of the flag is revealed!
+
+  I did my best to add limits to prevent him from getting
+  tired out and revealing the flag, hopefully there's no bugs
+hints:
+  - Connect using `nc` aka Netcat
+authors:
+  - Andrew
+visible: true
+deploy:
+  nc:
+    build: .
+    expose: 9999/tcp
