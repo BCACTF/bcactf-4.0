@@ -8,7 +8,7 @@ let fp = readFileSync([46,47,102,47,108,47,97,47,103,47,102,108,97,103,46,116,12
     String.fromCharCode(x)
 ).join('')).toString();
 
-const port = 5000;
+const port = 3000;
 const app = express();
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/pages');

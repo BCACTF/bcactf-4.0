@@ -17,5 +17,5 @@ WORKDIR /usr/src/app/server
 RUN npm run build --if-present
 
 # Expose port and run server
-EXPOSE 5000
+EXPOSE 3000
 CMD ["npm", "start"]
