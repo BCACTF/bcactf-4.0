@@ -17,5 +17,5 @@ authors:
 deploy:
   web:
     build: .
-    expose: 31571/tcp
+    expose: 5000/tcp
 visible: true
