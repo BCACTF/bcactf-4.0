@@ -14,4 +14,7 @@ hints:
 authors:
   - Mudasir Ali
 visible: true
-# TODO: deployment
+deploy:
+  web:
+    build: .
+    expose: 5000/tcp

@@ -13,5 +13,5 @@ files:
 deploy:
   web:
     build: .
-    expose: 23840/tcp
+    expose: 5000/tcp
 visible: true
