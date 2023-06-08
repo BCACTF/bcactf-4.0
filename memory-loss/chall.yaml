@@ -12,10 +12,14 @@ description: |-
   I was thinking of the flag.. I think?
 hints:
   - Is memory really lost?
-# deploy:
-#   nc:
-#     build: .
-#     expose: 9999/tcp
 authors:
   - Andrew
 visible: true
+deploy:
+  nc:
+    build: .
+    expose: 9999/tcp
+files:
+  - src: /home/ctf/memoryl0ss
+    dest: memoryl0ss
+    container: nc
