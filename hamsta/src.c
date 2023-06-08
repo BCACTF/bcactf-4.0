@@ -206,6 +206,18 @@ void print_sliced_string(char* string, int count) {
     putchar('\n');
 }
 
+
+int readInteger() {
+    // Regarding this code, thank CHAT-GPT 3.5
+    char input[20]; // Assuming the input will be within 20 characters
+
+    fgets(input, sizeof(input), stdin); // Read input from the user
+
+    int number = atoi(input); // Convert input to an integer
+
+    return number;
+}
+
 #define MAX_DISTANCE 11
 
 int main() {
@@ -230,7 +242,7 @@ int main() {
     puts("The further he runs, the more of the flag you get");
     do {
         printf("How many miles do you want him to run? ");
-        scanf("%d", &distance);
+        distance = readInteger();
 
         if (distance > MAX_DISTANCE) {
             puts("HEY! My hamster is not a MACHINE");
@@ -240,7 +252,9 @@ int main() {
         }
 
         printf("Awesome, (%d <= %d) is true, so my hamster's ready to run!\n", distance, MAX_DISTANCE);
-        for (int i = 0; i != distance && i < flag_len; ++i) {
+        sleep(1);
+        int i;
+        for (i = 0; i != distance && i < flag_len; ++i) {
             hamster_frame2();
             printf("Flag is: ");
             print_sliced_string(flag, i + 1);
@@ -254,8 +268,12 @@ int main() {
             print_sliced_string(flag, i + 1);
             sleepms(250);
         }
+
+        if (i == flag_len) return 0;
+
         wait_for(3);
-        puts("That was fun! Let's do it again!");
+        printf("Welp! That was %d miles, time top stop\n", distance);
+        puts("But let's do it again!");
     } while (1);
 
     puts("Unknown option. Goodbye");
