@@ -12,9 +12,10 @@ const challs = []
 for (const f of files) {
     if (f.isDirectory() && !f.name.startsWith(".") && f.name !== "checker") {
         const chall = f.name;
-        const y = readFileSync(join(__dirname, "..", "..", chall, "chall.yaml"), "utf-8");
+        const path = join(__dirname, "..", "..", chall)
+        const y = readFileSync(join(path, "./chall.yaml"), "utf-8");
 	    const data = parse(y);
-        challs.push({...data, path: chall});
+        challs.push({...data, dir: chall, path});
 	}
 }
 

@@ -1,7 +1,7 @@
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose()
 const app = express();
-const port = 5000;
+const port = 3000;
 
 app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");

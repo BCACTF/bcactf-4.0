@@ -21,9 +21,9 @@ for (const category in byCategory) {
     const data = table[category] = {};
 
     data.count = challs.length;
-    data.maxval = challs.reduce((V,b) => b.value > V ? b.value : V, 0);
-    data.minval = challs.reduce((V,b) => b.value > V ? V : b.value, Infinity);
-    data.avgval = challs.reduce((V,b) => V + b.value, 0) / challs.length;
+    data.maxval = challs.reduce((V, b) => b.value > V ? b.value : V, 0);
+    data.minval = challs.reduce((V, b) => b.value > V ? V : b.value, Infinity);
+    data.avgval = challs.reduce((V, b) => V + b.value, 0) / challs.length;
     data.avgval = Math.round(data.avgval);
 }
 

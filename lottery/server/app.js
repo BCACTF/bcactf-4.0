@@ -5,7 +5,7 @@ const fs = require('fs');
 const cookieParser = require('cookie-parser');
 const secret = "0ca04547f860592dbb2be76b4da2c73e6cc072e6d874bd127801763be8ea74c1c02a5d6d5d79d0989eaf8f67ff2c7512c4524c20b2e126e53afe68ea9c13884b";
 const app = express();
-const port = 5000;
+const port = 3;
 
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
