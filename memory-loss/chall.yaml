@@ -1,0 +1,25 @@
+name: memoryl0ss
+categories:
+  - binex
+value: 150
+flag:
+  file: ./flag.txt
+description: |-
+  > mĕm'ə-rē lŏs
+  > A conditional instance at which point previous mental contraptions
+  lose their referencability.
+
+  I was thinking of the flag.. I think?
+hints:
+  - Is memory really lost? How does malloc make things fast
+authors:
+  - Andrew
+visible: true
+deploy:
+  nc:
+    build: .
+    expose: 9999/tcp
+files:
+  - src: /home/ctf/memoryl0ss
+    dest: memoryl0ss
+    container: nc

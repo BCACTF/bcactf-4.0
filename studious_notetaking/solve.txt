@@ -1,0 +1,3 @@
+1. Clone the repository: `git clone https://github.com/Studious-Notetaker/REPO-OF-EPICNESS.git` (or the SSH equivalent).
+2. Run this command: `git fetch origin refs/notes/*:refs/notes/*`. If you are using zsh, you may have to prefix the command with `noglob`.
+3. Run `git log`. The flag is in the log for commit e98ab16.

@@ -1,0 +1,77 @@
+body {
+    background-color: #769f92;
+}
+
+h1 {
+    display: block;
+    margin: auto;
+    font-family: "Comic Sans MS", sans-serif;
+    width: 60vw;
+    color: #663399;
+    text-align: center;
+    padding: 5%;
+}
+
+sup {
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.form {
+    display: block;
+    margin: auto;
+    width: 60vw;
+    padding: 5%;
+    background-color: #c3dee2;
+    border-radius: 10px;
+    outline: 1px solid #663399;
+    text-align: right;
+}
+
+input[type="text"] {
+    display: inline-block;
+    margin: 2vh 0 1vh auto;
+    width: 80%;
+    padding: 1%;
+    border-radius: 5px;
+    border: 1px solid #663399;
+    outline: none;
+}
+
+button[type="submit"] {
+    display: inline-block;
+    width: 3vw;
+    min-width: 30px;
+    padding: 1%;
+    border-radius: 50%;
+    border: 1px solid #663399;
+    outline: none;
+    background-color: #663399;
+    color: #c3dee2;
+}
+
+button[type="submit"]:hover {
+    background-color: #9058c8;
+}
+
+.conversation {
+    font-family: "Inter", sans-serif;
+}
+
+.you {
+    text-align: left;
+    border-radius: 20px;
+    background-color: #769f92;
+    width: max-content;
+    max-width: 97%;
+    padding: 1vh 1vw;
+}
+
+.BCAGPT {
+    border-radius: 20px;
+    background-color: #43d633;
+    width: max-content;
+    max-width: 97%;
+    padding: 1vh 1vw;
+    margin-left: auto;
+}

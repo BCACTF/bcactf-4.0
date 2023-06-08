@@ -1,0 +1,15 @@
+name: Subpixels
+categories:
+  - foren
+value: 125
+flag:
+  file: ./flag.txt
+description: |-
+  I found this really cool picture online!
+hints:
+  - Find the original image
+files:
+  - src: ./subpixels.png
+authors:
+  - Marvin
+visible: true
