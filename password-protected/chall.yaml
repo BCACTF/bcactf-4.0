@@ -1,7 +1,7 @@
 name: Password Protected
 categories:
-  - rev
-value: 100
+  - misc
+value: 175
 flag: 
   file: ./flag.txt
 description: |-
@@ -18,3 +18,4 @@ deploy:
 authors:
   - Jack
 visible: true
+# TODO: Deployment
