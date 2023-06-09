@@ -1,0 +1,15 @@
+name: Dots and Dashes
+categories:
+  - crypto
+value: 25
+flag: 
+  file: ./flag.txt
+description: |-
+  My friend sent me a message by flashing his flashlight, and I recorded it using .'s and -'s. Can you help me decode it?
+hints:
+  - What other codes only use 2 characters?
+files:
+  - src: ./code.txt
+authors:
+  - Parth
+visible: true

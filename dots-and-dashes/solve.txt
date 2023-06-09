@@ -1,0 +1,2 @@
+1. Change all the -'s to 0's and .'s to 1's.
+2. Convert the binary to ASCII to get the flag.
