@@ -1,0 +1,14 @@
+name: Discord
+categories:
+  - webex
+value: 50
+flag: 
+  file: ./flag.txt
+description: |-
+  I heards the Johnsons' cookie shop is amazing, but unfortunately the owner isn't around,
+  Can you help me get the Chocolate Chip and Oatmeal Cookies?
+hints:
+  - Where does the server get the information for order creation
+authors:
+  - Jack
+visible: true
