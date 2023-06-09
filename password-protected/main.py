@@ -58,7 +58,8 @@ for line in passwd:
 
     hash = shadow[hashIndex:].split(":")[0]
     if not re.match(pattern, hash):
-      raise ValueError(f"String {hash} does not match required regex \$\d\$.+\$.+")
+      print(f"String {hash} does not match required regex \$\d\$.+\$.+")
+      exit()
     
     _,hashType,salt,hash = hash.split("$")
     hashType = int(hashType)
