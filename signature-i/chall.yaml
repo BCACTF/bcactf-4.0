@@ -13,4 +13,7 @@ files:
 authors:
   - Marvin
 visible: true
-# TODO: deploy with netcat
+deploy:
+  nc:
+    build: .
+    expose: 9999/tcp
