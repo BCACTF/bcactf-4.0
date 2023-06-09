@@ -14,4 +14,7 @@ files:
 authors:
   - Parth
 visible: true
-# Needs docker file TODO deployment
+deploy:
+  nc:
+    build: .
+    expose: 9999/tcp
