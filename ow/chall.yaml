@@ -1,4 +1,4 @@
-name: ow
+name: ow (VOLUME WARNING)
 categories:
   - foren
 value: 125
@@ -9,8 +9,11 @@ description: |-
   SOMEONE WAS WHISPERING THE FLAG IN MY EAR BUT I COULDN'T HEAR THEM OVER THE DEAFENING SOUND OF THE APOCALYPSE 
   
   PLEASE HELP
+
+  (VOLUME WARNING. NO, SERIOUSLY, SET YOUR VOLUME TO LIKE 10% OR SOMETHING AND THEN TURN IT UP IF YOU'RE A MASOCHIST I GUESS.)
 hints:
-  - What might whispering in one ear entail?
+  - (VOLUME WARNING)
+  - What might whispering in one ear entail? 
 files:
   - src: ./ow.mp3
 authors:
