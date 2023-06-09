@@ -53,5 +53,8 @@ files:
   - src: /app/lost_block.txt
     dest: lost_block
     container: web
+  - src: /app/git-better.tar.gz
+    dest: git-better.tar.gz
+    container: web
 
 visible: true

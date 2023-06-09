@@ -73,5 +73,10 @@ RUN cp -r ./build/* ../
 WORKDIR /app
 RUN rm -r temp
 
+RUN mkdir ./chall_tar
+RUN cp -r ./base ./server ./chall_tar
+RUN tar -czvf git_better.tar.gz ./chall_tar
+RUN rm -r ./chall_tar
+
 EXPOSE 8080
 CMD npx ts-node ./server/index.ts
