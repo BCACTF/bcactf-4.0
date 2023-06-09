@@ -1,0 +1,5 @@
+1. Account Name Checker only checks if inputted account name starts with a valid account
+2. Since every linux system has a root, start with root and add on characters, which will mess up the regex max and give you the next part
+3. Search through file this way until you get to proper account, jonwil
+4. Using his hash, create your own /etc/password and /etc/shadow and use unshadow to merge them into 1 file
+5. Using john the ripper with this unshadow file and the rock you password database, it should take ~5 seconds to get password
