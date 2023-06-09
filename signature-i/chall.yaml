@@ -7,7 +7,8 @@ flag:
 description: |-
   The other day I learned that you can sign messages with RSA. Can you check my implementation?
 hints:
-  -  Anything missing from that regex?
+  - Anything missing from that regex?
+  - The implementation is vulnerable to a well-known attack.
 files:
   - src: signature-i.py
 authors:
