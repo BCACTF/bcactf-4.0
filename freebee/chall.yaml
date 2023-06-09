@@ -2,7 +2,7 @@ name: FreeBee
 categories:
   - webex
 value: 50
-flag: 
+flag:
   file: ./flag.txt
 description: |-
   I want to read this really cool article, but they have a paywall
@@ -10,4 +10,7 @@ description: |-
 authors:
   - Jack
 visible: true
-#TODO Deployment
+deploy:
+  web:
+    build: .
+    expose: 3000/tcp
