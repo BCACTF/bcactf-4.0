@@ -3,10 +3,12 @@
 #include <emscripten.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include "flush.h"
 #include "texture.h"
 #include "bin.h"
 #include "crypto.h"
 #include "ball.h"
+#include <stdio.h>
 
 ball_t players_cache[11];
 
@@ -72,6 +74,10 @@ void conn_init(game_conn_t* my) {
 void conn_talk(game_conn_t* my, buffer_t* buffer) {
     crypto_encrypt(&my->crypto, buffer);
 
+    add_and_clone_packet_to_district(10, buffer);
+}
+
+void conn_send(game_conn_t* my, buffer_t* buffer) {
     EM_ASM({
         ws.send(HEAPU8.subarray($0, $0 + $1));
     }, buffer->data, buffer->size);
@@ -99,14 +105,10 @@ void conn_on_close(game_conn_t* my) {
     my->ops.cookie = 0;
 }
 
-void conn_on_msg(game_conn_t* my, uint32_t size) {
-    buffer_t view = {
-        .data = my->space->data + 16,
-        .size = size
-    };
+void conn_on_msg(game_conn_t* my, buffer_t* view) {
     qreader_t r;
-    qreader_init(&r, &view);
-    crypto_decrypt(&my->crypto, &view);
+    qreader_init(&r, view);
+    crypto_decrypt(&my->crypto, view);
 
     // only for first packet
     if (my->rng.state == 0) {
@@ -222,11 +224,121 @@ void conn_trysend_movement(game_conn_t* my, float x, float y) {
     qwriter_destroy(&w);   
 }
 
+void conn_flushing(game_conn_t* my) {
+    // little maze 2
+    if (district_buffer_size(0) != 0) {
+        buffer_t* new = pop_packet_from_district_into_new_buffer(0);
+        add_and_clone_packet_to_district(2, new);
+        free(new);
+    }
+    if (district_buffer_size(1) != 0) {
+        buffer_t* new = pop_packet_from_district_into_new_buffer(1);
+        add_and_clone_packet_to_district(5, new);
+        free(new);
+    }
+    if (district_buffer_size(2) != 0) {
+        buffer_t* new = pop_packet_from_district_into_new_buffer(2);
+        add_and_clone_packet_to_district(8, new);
+        free(new);
+    }
+    if (district_buffer_size(3) != 0) {
+        buffer_t* new = pop_packet_from_district_into_new_buffer(3);
+        add_and_clone_packet_to_district(7, new);
+        free(new);
+    }
+    if (district_buffer_size(4) != 0) {
+        buffer_t* new = pop_packet_from_district_into_new_buffer(4);
+        add_and_clone_packet_to_district(3, new);
+        free(new);
+    }
+    if (district_buffer_size(5) != 0) {
+        buffer_t* new = pop_packet_from_district_into_new_buffer(5);
+        add_and_clone_packet_to_district(6, new);
+        free(new);
+    }
+    if (district_buffer_size(6) != 0) {
+        buffer_t* new = pop_packet_from_district_into_new_buffer(6);
+        add_and_clone_packet_to_district(4, new);
+        free(new);
+    }
+    if (district_buffer_size(7) != 0) {
+        buffer_t* new = pop_packet_from_district_into_new_buffer(7);
+        add_and_clone_packet_to_district(9, new);
+        free(new);
+    }
+    if (district_buffer_size(8) != 0) {
+        buffer_t* new = pop_packet_from_district_into_new_buffer(8);
+        add_and_clone_packet_to_district(1, new);
+        free(new);
+    }
+    if (district_buffer_size(9) != 0) {
+        buffer_t* new = pop_packet_from_district_into_new_buffer(9);
+        conn_on_msg(my, new);
+        free(new);
+    }
+
+    // little maze
+    if (district_buffer_size(10) != 0) {
+        buffer_t* new = pop_packet_from_district_into_new_buffer(10);
+        add_and_clone_packet_to_district(12, new);
+        free(new);
+    }
+    if (district_buffer_size(11) != 0) {
+        buffer_t* new = pop_packet_from_district_into_new_buffer(11);
+        add_and_clone_packet_to_district(15, new);
+        free(new);
+    }
+    if (district_buffer_size(12) != 0) {
+        buffer_t* new = pop_packet_from_district_into_new_buffer(12);
+        add_and_clone_packet_to_district(18, new);
+        free(new);
+    }
+    if (district_buffer_size(13) != 0) {
+        buffer_t* new = pop_packet_from_district_into_new_buffer(13);
+        add_and_clone_packet_to_district(17, new);
+        free(new);
+    }
+    if (district_buffer_size(14) != 0) {
+        buffer_t* new = pop_packet_from_district_into_new_buffer(14);
+        add_and_clone_packet_to_district(13, new);
+        free(new);
+    }
+    if (district_buffer_size(15) != 0) {
+        buffer_t* new = pop_packet_from_district_into_new_buffer(15);
+        add_and_clone_packet_to_district(16, new);
+        free(new);
+    }
+    if (district_buffer_size(16) != 0) {
+        buffer_t* new = pop_packet_from_district_into_new_buffer(16);
+        add_and_clone_packet_to_district(14, new);
+        free(new);
+    }
+    if (district_buffer_size(17) != 0) {
+        buffer_t* new = pop_packet_from_district_into_new_buffer(17);
+        add_and_clone_packet_to_district(19, new);
+        free(new);
+    }
+    if (district_buffer_size(18) != 0) {
+        buffer_t* new = pop_packet_from_district_into_new_buffer(18);
+        add_and_clone_packet_to_district(11, new);
+        free(new);
+    }
+    if (district_buffer_size(19) != 0) {
+        buffer_t* new = pop_packet_from_district_into_new_buffer(19);
+        conn_send(my, new);
+        free(new);
+    }
+}
 
 void EMSCRIPTEN_KEEPALIVE on_msg(uint8_t* space, uint32_t size) {
     game_conn_t* conn = (game_conn_t*) *((void**) (space - 32));
 
-    conn_on_msg(conn, size);
+
+    buffer_t view = {
+        .data = conn->space->data + 16,
+        .size = size
+    };
+    add_and_clone_packet_to_district(0, &view);
 }
 
 void EMSCRIPTEN_KEEPALIVE on_close(uint8_t* space, uint32_t size) {

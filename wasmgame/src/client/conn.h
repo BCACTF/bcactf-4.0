@@ -27,5 +27,6 @@ EMSCRIPTEN_KEEPALIVE void on_msg(uint8_t* space, uint32_t size);
 void conn_init(game_conn_t* my);
 // up to 11s
 void conn_get_players(ball_t* list);
+void conn_flushing(game_conn_t* my);
 
 void conn_trysend_movement(game_conn_t* my, float x, float y);

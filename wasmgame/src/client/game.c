@@ -29,6 +29,7 @@ void game_init(game_t* my) {
 void game_tick(game_t* my) {
     ball_t players[11];
     
+    conn_flushing(my->conn);
     conn_get_players(players);
 
     uint32_t j;

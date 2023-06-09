@@ -4,7 +4,9 @@
 #include "bin.h"
 
 typedef struct {
-
+    uint32_t seed;
+    uint32_t seed2;
+    uint32_t xorors[4000];
 } crypto_t;
 
 typedef struct {

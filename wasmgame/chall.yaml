@@ -14,9 +14,8 @@ hints:
   - want to decode the messages? Find the decoder!
 authors:
   - Andrew
-# deploy:
-#   web:
-#     build: .
-#     expose: 8080/tcp
 visible: true
-# TODO host express js server
+deploy:
+  web:
+    build: .
+    expose: 3000/tcp

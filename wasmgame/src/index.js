@@ -2,7 +2,7 @@ import { WebSocketServer } from 'ws';
 import * as game from './server/game.js';
 import * as http from 'http';
 import * as fs from 'fs';
-const PORT = 8080;
+const PORT = 3000;
 
 const indexHTML = fs.readFileSync("./public/index.html", 'utf-8');
 const jsCode = fs.readFileSync("./public/wasm.js", "utf-8");
@@ -63,4 +63,4 @@ wss.on("connection", game.client)
 
 server.listen(PORT, "0.0.0.0", () => {
     console.log(`Listening on port ${PORT} at ${server.address().address || server.address()}`);
-})
+});

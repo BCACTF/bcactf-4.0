@@ -209,7 +209,7 @@ export const client = (ws) => {
     ws.crypt = qcrypt();
     ws.talk = (bytes) => {
         if (ws.readyState === WebSocket.OPEN) {
-            ws.send(ws.crypt.encrypt(new Uint8Array(bytes)))
+            ws.send(ws.crypt.encrypt(ws, new Uint8Array(bytes)))
         }
     }
     const SEED = BigInt(ws.SEED = Math.floor(Math.random() * 0x7FFFFFFF));
@@ -246,6 +246,8 @@ export const client = (ws) => {
         update: _genop(),
     }
 
+    ws.seed = 0xFFaaCCee;
+    ws.seed2 = 0xAAbbCC99;
 
     ws.onmsg = null;
     ws.on('error', () => ws.terminate());
@@ -258,7 +260,7 @@ export const client = (ws) => {
         ws.terminate()
     });
     ws.on('message', (data) => {
-        if (ws.onmsg) ws.onmsg(ws.crypt.decrypt(new Uint8Array(data)));
+        if (ws.onmsg) ws.onmsg(ws.crypt.decrypt(ws, new Uint8Array(data)));
     })
 
     handshake(ws)
