@@ -2,11 +2,16 @@ import { WebSocketServer } from 'ws';
 import * as game from './server/game.js';
 import * as http from 'http';
 import * as fs from 'fs';
+import obfuscate from './obf.js';
 const PORT = 3000;
 
 const indexHTML = fs.readFileSync("./public/index.html", 'utf-8');
 const jsCode = fs.readFileSync("./public/wasm.js", "utf-8");
-const wasmCode = fs.readFileSync("./public/wasm.wasm");
+
+const wasmCode = Buffer.concat([
+    obfuscate(fs.readFileSync("./public/wasm.wasm"), { nameStyle: () => "a"}),
+    Buffer.from([0, 8, 4, 110, 97, 109, 101, 2, 1, 1])
+])
 const images = [
     "clubpenguin.png",
     "pop.png",
