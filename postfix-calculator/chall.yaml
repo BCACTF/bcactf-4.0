@@ -1,7 +1,7 @@
 name: Postfix Calculator
 categories:
-  - rev
-value: 50
+  - misc
+value: 75
 flag: 
   file: ./flag.txt
 description: |-
@@ -14,4 +14,4 @@ files:
 authors:
   - Parth
 visible: true
-# Needs docker file
+# Needs docker file TODO deployment
