@@ -11,6 +11,10 @@ hints:
   - Have you heard of RockYou?
 files:
   - src: ./password_protected.py
+deploy:
+  nc:
+    build: .
+    expose: 9999/tcp
 authors:
   - Jack
 visible: true
