@@ -38,6 +38,7 @@ def main():
             elif command.startswith("press"):
                 button = command.split(" ")[1]
                 if button == "RESET":
+                    reset["val"] = 1
                     print("(resetting...)")
                     sleep(1)
                     continue
