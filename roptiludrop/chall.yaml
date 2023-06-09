@@ -1,7 +1,7 @@
 name: ROP 'til you drop
 categories:
   - binex
-value: 200
+value: 150
 flag:
   file: ./flag.txt
 description: |-
