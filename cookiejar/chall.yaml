@@ -9,6 +9,7 @@ description: |-
   Can you help me get the Chocolate Chip and Oatmeal Cookies?
 hints:
   - Where does the server get the information for order creation
+  - John (The Owner) can only accept orders from the table
 authors:
   - Jack
 visible: true
