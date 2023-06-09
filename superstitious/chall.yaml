@@ -1,0 +1,16 @@
+name: Superstitious
+categories:
+  - crypto
+value: 150
+flag: 
+  file: ./flag.txt
+description: |-
+  My client is a bit picky with the primes they are willing to use...
+files:
+  - src: ./superstitious.py
+  - src: ./superstitious.txt
+hints:
+  - No hints, good luck!
+authors:
+  - Marvin
+visible: true

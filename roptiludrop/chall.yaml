@@ -1,0 +1,26 @@
+name: ROP 'til you drop
+categories:
+  - binex
+value: 150
+flag:
+  file: ./flag.txt
+description: |-
+  DANCE! DANCE! DAOCE! DROCE! ROCE! ROPE! ROP! ROP! ROP!
+
+  Rop till you drop.
+hints:
+  - If you are lost, you must RETurn to a place you know exists. What is ROP?
+files:
+  - src: /home/ctf/roptiludrop
+    dest: roptiludrop
+    container: nc
+  - src: /lib/x86_64-linux-gnu/libc-2.31.so
+    dest: libc.so.6
+    container: nc
+authors:
+  - Andrew
+visible: true
+deploy:
+  nc:
+    build: .
+    expose: 9999/tcp

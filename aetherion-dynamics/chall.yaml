@@ -1,0 +1,17 @@
+name: Aetherion Dynamics
+categories:
+  - foren
+value: 50
+flag: bcactf{n0t_S0_5Ecre7_ANyMorE}
+description: |-
+  Aetherion Dynamics is a cutting-edge company operating under the highest levels of secrecy.
+  We've managed to get our hands on one of their top-secret memos, but it's redacted!
+  You need to help us find their secret password.
+hints:
+  - I wonder if you can remove that redaction line...
+files:
+  - src: ./SecretFacilityAccess.pdf
+authors:
+  - Thomas
+  - Puhalenthi
+visible: true

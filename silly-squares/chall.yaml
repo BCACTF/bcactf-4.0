@@ -1,0 +1,20 @@
+name: Silly-Squares
+categories:
+  - foren
+value: 25
+flag: bcactf{th1s_is_a_r34l_flag}
+description: |-
+  I found this marvelous painting of these squares over a red background.
+  It is quite a piece of art.
+  I don't know why I found them so funny, but I can't stop laughing at them.
+  My teacher told me I have to find the flag or I fail. 
+  However, the squares are so silly that I can't stop myself from laughing for long enough to find the flag.
+  Can you please find them for me?
+hints:
+  - Have you tried taking a closer look at the squares?
+  - Have you noticed how bright they look?
+files:
+  - src: ./Silly_Squares.png
+authors:
+  - Andreas Bratu
+visible: true

@@ -1,0 +1,5 @@
+Way 1
+1. remove b class from all elements
+
+Way 2
+2. Copy svg and open it

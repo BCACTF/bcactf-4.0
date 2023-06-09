@@ -1,0 +1,17 @@
+name: Unionized
+categories:
+  - webex
+value: 100
+flag: bcactf{1_L0v3_sQl_UN10n_QU3r13S}
+description: I was messing with some SQL, so I made this basic website. It only
+  stores school data...probably.
+hints:
+  - The name of this challenge could be a clue
+  - The backend uses SQLite3
+authors:
+  - Shahmeer Ali
+deploy:
+  web:
+    build: .
+    expose: 3000/tcp
+visible: true

@@ -37,7 +37,8 @@ def main():
                 
             elif command.startswith("press"):
                 button = command.split(" ")[1]
-                if button == "RESET":
+                if button.upper() == "RESET":
+                    reset["val"] = 1
                     print("(resetting...)")
                     sleep(1)
                     continue
@@ -53,7 +54,7 @@ def main():
 
             elif command.startswith("release"):
                 button = command.split(" ")[1]
-                if button == "RESET" and reset["val"] == 1:
+                if button.upper() == "RESET" and reset["val"] == 1:
                     print("(successfully reset)")
                     setup()
                     break
@@ -71,8 +72,8 @@ def main():
                 if pin < 0 or pin > 13:
                     print("(invalid pin)")
                     continue
-                if mode in ["INPUT","OUTPUT"]:
-                    pins[pin]["type"] = mode
+                if mode.upper() in ["INPUT","OUTPUT"]:
+                    pins[pin]["type"] = mode.upper()
                 else:
                     print("(invalid mode)")
 

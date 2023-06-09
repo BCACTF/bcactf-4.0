@@ -1,0 +1,18 @@
+name: Huffffman
+categories:
+  - crypto
+value: 150
+flag: bcactf{qu4t3rna5y_7re35_w0w_j8r3ne1j29}
+description: |-
+  Have you heard of Huffman coding? 
+  I thought it was cool, but I wanted something cooler.
+  I call it, Huffffman coding!
+  See if you can decode my story!
+hints:
+  - Most of the process will be the same, but there are important differences.
+  - It seems like Huffman has 2, but Huffffman had 4.
+files:
+  - src: ./story.txt.enc
+authors:
+  - Jeremy Lee
+visible: true

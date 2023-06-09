@@ -1,0 +1,11 @@
+If you compare the two models, you can see that they are not exactly the same. Some of the vertices are shifted.
+If we print out the position coordinates of all the vertices of both models, we can compare the differences of the first couple of vertices, and see that they are not the same.
+Only the z coordinates are different. If we subtract the z coordinates of the vertices of the first model from the z coordinates of the vertices of the second model, the first few differences we get are:
+0.009800001978874207
+0.009900003671646118
+0.009700000286102295
+0.009900003671646118
+0.011600002646446228
+0.010200001299381256
+
+98, 99, 97, 99, 116, and 102 are the ASCII values for bcactf, so it seems they are the ASCII values for the flag. If we get all the differences, multiply them by 10000, round them, and get the character with that ASCII value, we get the flag.

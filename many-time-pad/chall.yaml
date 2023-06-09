@@ -1,0 +1,17 @@
+name: Many Time Pad
+categories:
+  - crypto
+value: 50
+flag:
+  file: ./flag.txt 
+description: |-
+  I heard that one-time pads are unbreakable! I'm going to use it for everything!!
+hints:
+  - It's called a _one-time_ pad for a reason.
+files:
+  - src: ./many-time-pad.py
+  - src: ./many-time-pad.out
+  - src: ./grocery-list.out
+authors:
+  - Marvin
+visible: true

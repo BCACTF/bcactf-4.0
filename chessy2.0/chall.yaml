@@ -1,0 +1,18 @@
+name: Chessy 2.0
+categories:
+  - crypto
+value: 125
+flag: bcactf{b15h0ps_4r3n7_kn16ht5_34j21nd92}
+
+description: |-
+  I've been learning a bit more chess recently,
+  but I'm having trouble understanding the value of this.
+  Can you help me (again)?
+hints:
+  - These are a lot of boards, are they worth anything?
+  - The pieces together make up each board
+files:
+  - src: ./FEN.txt
+authors:
+  - Jeremy Lee
+visible: true

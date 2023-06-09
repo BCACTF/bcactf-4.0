@@ -1,0 +1,3 @@
+1. Create order
+2. Modify cookie of order to be Chocolate Chip and Oatmeal, and do /order
+3. Change base64 to owner's name (John Johnsons), and click accept

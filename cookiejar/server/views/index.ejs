@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 75%;
+            margin-top: 50px;
+        }
+
+        th {
+            padding: 10px;
+        }
+
+        tr {
+            border: 1px solid #b7b7b7;
+            text-align: center;
+            height: 50px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: red;"><%= badThing %></h1>
+    <h1>Welcome to John Johnsons' Cookie Store</h1>
+    <img src="/cookiejar.png" alt="" style="display: block;">
+
+    <div class="orders">
+        <h1>Active orders</h1>
+        <table>
+            <tr>
+                <td>Name Ordered</td>
+                <td>Cookie Types</td>
+                <td>Cookie Amounts</td>
+                <td>Accept</td>
+            </tr>
+            <% for (let i = 0; i < orders.length; i++) { %>
+                <tr>
+                    <td>
+                        <%= orders[i].name %>
+                    </td>
+                    <td>
+                        <%= orders[i].types%>
+                    </td>
+                    <td>
+                        <%= orders[i].amounts%>
+                    </td>
+                    <td><a style="background-color: green; padding: 10px; text-decoration: none; color: white" href="<%= '/accept/'+i %>">Accept</a></td>
+                </tr>
+                <% }; %>
+        </table>
+    </div>
+
+    <div class="order" style="margin-top: 50px">
+        <h1>Create Order</h1>
+        <input class="type" type="text" name="type">
+        <label for="type">Type: </label>
+        <br>
+        <input class=amount type="number" name="amount">
+        <label for="amount">Amount: </label>
+        <br>
+        <br>
+        <a href="/order" onclick="onCreateOrderClick()"
+            style="text-decoration: none; background-color: #676767; border: 1px solid black; color: white; padding: 10px; margin-top: 20px;">Create
+            Order</a>
+    </div>
+
+    <script src="/index.js"></script>
+
+</body>
+
+</html>

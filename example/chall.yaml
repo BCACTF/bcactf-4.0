@@ -25,5 +25,5 @@ files:
 authors:
   - John Doe
   - Jane Smith
-visible: true
+visible: false # CHANGE THIS TO true FOR YOUR CHALL
 # TODO: deployment

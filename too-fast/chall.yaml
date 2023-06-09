@@ -1,0 +1,14 @@
+name: Too Fast
+categories:
+  - foren
+value: 100
+flag: bcactf{y0U_@lm0$7_m!$s3D_!7_e3idwind}
+description: |-
+  I found this QR code, but I can't seem to scan it.
+files:
+  - src: ./ctf.gif
+hints:
+  - No hints, good luck!
+authors:
+  - Mudasir
+visible: true

@@ -1,0 +1,20 @@
+name: Password Protected
+categories:
+  - misc
+value: 175
+flag: 
+  file: ./flag.txt
+description: |-
+  Can you help log Jon Wilkie back into his account?
+hints:
+  - Do you know any common users?
+  - Have you heard of RockYou?
+files:
+  - src: ./password_protected.py
+deploy:
+  nc:
+    build: .
+    expose: 9999/tcp
+authors:
+  - Jack
+visible: true
