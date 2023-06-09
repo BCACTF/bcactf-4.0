@@ -2,7 +2,7 @@ name: Git Even Better
 categories:
   - crypto
   - rev
-value: 200
+value: 300
 flag:
   file: flag.txt
 description: |-
