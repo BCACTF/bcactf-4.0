@@ -41,9 +41,8 @@ void life() {
     printf("What is this? %p\n", (void*)printf);
 
     printf("\nDO NOT STOP ROPPING\n> ");
-    gets(future);
+    fread(future, 1, 80, stdin);
     puts(future);
-
 }
 
 int main() {
