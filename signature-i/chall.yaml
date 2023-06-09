@@ -1,7 +1,7 @@
 name: Signature I
 categories:
   - crypto
-value: 100
+value: 150
 flag:
   file: ./flag.txt
 description: |-
@@ -11,7 +11,6 @@ hints:
 files:
   - src: signature-i.py
 authors:
-  - John Doe
-  - Jane Smith
+  - Marvin
 visible: true
-# TODO: deployment
+# TODO: deploy with netcat
