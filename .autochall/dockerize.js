@@ -10,11 +10,11 @@ import { stringify } from 'yaml';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const dir = process.argv[0].endsWith("node") ? process.argv[2] : process.argv[1];
-
+const deployType = process.argv[0].endsWith("node") ? process.argv[3] : process.argv[2];
 console.error = (log, ...a) => console.log(chalk.bgRedBright("ERR] " + log), ...a);
 
 if (typeof dir !== "string") {
-    console.error("`node dockerize <challenge folder name>`");
+    console.error("`node dockerize <challenge folder name> [deploy type]`");
     process.exit();
 }
 
@@ -202,11 +202,11 @@ console.log(chalk.gray("[!] Copied Dockerfile"));
 
 let valid = true;
 switch (true) {
-    case chall.categories.includes("binex"): {
+    case chall.categories.includes("binex") || deployType === "nc": {
         console.log(chalk.bold("Detected ") + chalk.bold.bgCyanBright("BINEX") + chalk.reset.bold(" challenge\n"));
         await createBinexDocker(chall);
     } break;
-    case chall.categories.includes("webex"): {
+    case chall.categories.includes("webex") || deployType === "web": {
         console.log(chalk.bold("Detected ") + chalk.bold.bgMagentaBright("WEBEX") + chalk.reset.bold(" challenge\n"));
         const type = await input.select("Choose app type", ["node", "python", "other"]);
         if (type === "other") {
@@ -221,6 +221,7 @@ switch (true) {
     default: {
         console.error("Unsupported challenge type");
         valid = false;
+        console.log(chalk.gray("Made a mistake? force challenge type with second parameter;"));
     } break;
 }
 
