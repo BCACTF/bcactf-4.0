@@ -25,8 +25,9 @@ function createSession(req) {
 app.get('/', (req, res) => {
     if (!req.session.view) {
         createSession(req)
+        res.cookie("name", "Qm9iIEJyb29rcw==")
     }
-    res.cookie("name", "Qm9iIEJyb29rcw==")
+    
 
     res.render("index", {orders: req.session.orders, badThing:req.session.badThing})
 });
