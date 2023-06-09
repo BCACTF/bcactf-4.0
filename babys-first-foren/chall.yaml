@@ -7,6 +7,8 @@ description: |-
   I found this beginner's guide to forensics.
 files:
   - src: ./babys-first-foren.png
+hints:
+  - No hints, good luck!
 authors:
   - Marvin
 visible: true

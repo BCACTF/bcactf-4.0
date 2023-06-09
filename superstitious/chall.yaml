@@ -9,6 +9,8 @@ description: |-
 files:
   - src: ./superstitious.py
   - src: ./superstitious.txt
+hints:
+  - No hints, good luck!
 authors:
   - Marvin
 visible: true

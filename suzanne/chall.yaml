@@ -7,7 +7,9 @@ description: |-
   Monkey. Different monkey? Original monkey?
 files:
   - src: ./suzanne_original.fbx
-  - src: ./suzanne_different.fbx 
+  - src: ./suzanne_different.fbx
+hints:
+  - No hints, good luck!
 authors:
   - Krish
 visible: true

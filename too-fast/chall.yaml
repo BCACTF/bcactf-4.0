@@ -7,6 +7,8 @@ description: |-
   I found this QR code, but I can't seem to scan it.
 files:
   - src: ./ctf.gif
+hints:
+  - No hints, good luck!
 authors:
   - Mudasir
 visible: true

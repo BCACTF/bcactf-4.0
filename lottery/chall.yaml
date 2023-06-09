@@ -9,6 +9,8 @@ authors:
   - Marvin
 files:
   - src: ./server/app.js
+hints:
+  - No hints, good luck!
 deploy:
   web:
     build: .

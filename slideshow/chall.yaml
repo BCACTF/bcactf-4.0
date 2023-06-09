@@ -9,6 +9,8 @@ description: |-
   Note: PowerPoint does not load the file correctly; LibreOffice Impress does, but neither are required to solve the challenge.
 files:
   - src: ./slideshow.odp
+hints:
+  - No hints, good luck!
 authors:
   - Marvin
 visible: true
