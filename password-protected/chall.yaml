@@ -1,7 +1,7 @@
 name: Password Protected
 categories:
-  - rev
-value: 100
+  - misc
+value: 175
 flag: 
   file: ./flag.txt
 description: |-
@@ -11,6 +11,11 @@ hints:
   - Have you heard of RockYou?
 files:
   - src: ./password_protected.py
+deploy:
+  nc:
+    build: .
+    expose: 9999/tcp
 authors:
   - Jack
 visible: true
+# TODO: Deployment

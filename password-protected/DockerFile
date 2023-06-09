@@ -10,4 +10,4 @@ RUN chmod +x ynetd
 
 USER ctf
 EXPOSE 9999
-CMD ./ynetd -p 9999 "python3 -m main.py"
+CMD ./ynetd -p 9999 "python3 main.py"
