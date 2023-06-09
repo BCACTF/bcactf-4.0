@@ -34,11 +34,11 @@ void ROP() {
 void life() {
     char future[16];
 
-    printf("What is this? %p\n", (void*) puts);
-
     printf("DO NOT STOP ROPPING\n> ");
     gets(future);
     printf(future);
+
+    printf("What is this? %p\n", (void*)printf);
 
     printf("\nDO NOT STOP ROPPING\n> ");
     gets(future);
