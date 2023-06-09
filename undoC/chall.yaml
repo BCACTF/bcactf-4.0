@@ -2,15 +2,14 @@ name: undoC
 categories:
   - rev
 value: 75
-flag: bcactf{}
+flag:
+  file: ./flag.txt
 description: |-
   I accidentally messed with my flag? Can you undo it?
 hints:
   - See what the code is doing and write a function to do the opposite
 files:
-  - src: ./scrambledFlag.cpp
+  - src: ./undoC
 authors:
   - Jacob
 visible: true
-# TODO: deployment
-# run scrambledFlag.cpp on through netcat with flag.txt so the code works **please**!
