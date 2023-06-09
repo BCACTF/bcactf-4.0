@@ -4,7 +4,7 @@ categories:
 value: 150
 flag: bcactf{qu4t3rna5y_7re35_w0w_j8r3ne1j29}
 description: |-
-  Have you heard of Huffman coding? 
+  Have you heard of [Huffman coding](https://courses.cs.duke.edu/cps100/spring16/Huffman/)? 
   I thought it was cool, but I wanted something cooler.
   I call it, Huffffman coding!
   See if you can decode my story!
