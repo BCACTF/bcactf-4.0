@@ -14,7 +14,7 @@ print(f'Provide a signature for the text {t}')
 try:
     sig = bytes_to_long(binascii.unhexlify(input(": ")))
     str = long_to_bytes(pow(sig, e, n))
-    hash = re.findall(rb'\x01\xff*\x00(.{32})', str)[0]
+    hash = re.findall(rb'\x01\xff*\x00(.{32})', str)[0] # PKCS padding
     if hash == h.digest():
         with open("flag.txt", "r") as f:
             print(f.read())
