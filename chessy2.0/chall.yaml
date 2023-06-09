@@ -1,7 +1,7 @@
 name: Chessy 2.0
 categories:
   - crypto
-value: 150
+value: 125
 flag: bcactf{b15h0ps_4r3n7_kn16ht5_34j21nd92}
 
 description: |-
@@ -16,4 +16,3 @@ files:
 authors:
   - Jeremy Lee
 visible: true
-# TODO: deployment

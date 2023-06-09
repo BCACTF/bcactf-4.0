@@ -1,7 +1,7 @@
 name: memoryl0ss
 categories:
   - binex
-value: 150
+value: 125
 flag:
   file: ./flag.txt
 description: |-

@@ -10,11 +10,11 @@ import { stringify } from 'yaml';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const dir = process.argv[0].endsWith("node") ? process.argv[2] : process.argv[1];
-
+const deployType = process.argv[0].endsWith("node") ? process.argv[3] : process.argv[2];
 console.error = (log, ...a) => console.log(chalk.bgRedBright("ERR] " + log), ...a);
 
 if (typeof dir !== "string") {
-    console.error("`node dockerize <challenge folder name>`");
+    console.error("`node dockerize <challenge folder name> [deploy type]`");
     process.exit();
 }
 
@@ -105,7 +105,7 @@ const createPyWebDocker = async (chall) => {
         console.error("requirements.txt NOT FOUND. Please add necessary lib and their versions (ex, Flask)");
         return;
     }
-    if (!(await input.confirm("Please confirm that the server code will listen on PORT 5000"))) {
+    if (!(await input.confirm("Please confirm that the server code will listen on PORT 3000"))) {
         console.error("Please make necessary changes to challenge");
         return;
     }
@@ -125,14 +125,14 @@ RUN pip3 install -r requirements.txt
 COPY . .
 
 # run and expose
-EXPOSE 5000
-CMD ["python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=5000"]`);
+EXPOSE 3000
+CMD ["python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=3000"]`);
 console.log(chalk.gray("[!] Copied Dockerfile"));
     const challMeta = {...chall};
     delete challMeta.path;
     delete challMeta.dir;
 
-    challMeta.deploy = {web: {build: ".", expose: "5000/tcp"}};
+    challMeta.deploy = {web: {build: ".", expose: "3000/tcp"}};
     console.log(chalk.gray("[!] Modified chall.yaml"));
 
     writeFileSync(join(chall.path, "chall.yaml"), stringify(challMeta));
@@ -202,11 +202,11 @@ console.log(chalk.gray("[!] Copied Dockerfile"));
 
 let valid = true;
 switch (true) {
-    case chall.categories.includes("binex"): {
+    case chall.categories.includes("binex") || deployType === "nc": {
         console.log(chalk.bold("Detected ") + chalk.bold.bgCyanBright("BINEX") + chalk.reset.bold(" challenge\n"));
         await createBinexDocker(chall);
     } break;
-    case chall.categories.includes("webex"): {
+    case chall.categories.includes("webex") || deployType === "web": {
         console.log(chalk.bold("Detected ") + chalk.bold.bgMagentaBright("WEBEX") + chalk.reset.bold(" challenge\n"));
         const type = await input.select("Choose app type", ["node", "python", "other"]);
         if (type === "other") {
@@ -221,6 +221,7 @@ switch (true) {
     default: {
         console.error("Unsupported challenge type");
         valid = false;
+        console.log(chalk.gray("Made a mistake? force challenge type with second parameter;"));
     } break;
 }
 

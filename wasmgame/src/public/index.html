@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+            background-color: #101010;
+            text-align: center;
+        }
+        canvas {
+            width: 100vw;
+            max-width: 100vh;
+            height: auto;
+            image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+            image-rendering: -moz-crisp-edges;          /* Firefox                        */
+            image-rendering: -o-crisp-edges;            /* Opera                          */
+            image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+            image-rendering: pixelated;                 /* Universal support since 2021   */
+            image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+            -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+            background-color: #101010;
+        }
+    </style>
+    <title>Super Circle Game</title>
+</head>
+<body>
+    <script>
+        const canvas = document.body.appendChild(document.createElement('canvas'));
+        const ctx = canvas.getContext('2d');
+        const SIZE =  1024 * 2 + 256;
+        canvas.width = canvas.height = SIZE;
+        let ws;
+        window.mx = canvas.width / 2;
+        window.my = canvas.height / 2;
+        let bound = document.querySelector("canvas").getBoundingClientRect();
+        window.addEventListener("resize", () => {
+            bound = document.querySelector("canvas").getBoundingClientRect();
+        })
+        window.imageMap = new Map();
+        canvas.addEventListener('mousemove', (event) => {
+            // just scales mouse x and mouse y to map x and map y and stores them
+            // only important for movement
+            window.mx = (canvas.width * (Math.min(Math.max(event.clientX, bound.left), bound.right) - bound.left) / bound.width) - canvas.width / 2
+            window.my = (canvas.height * (Math.min(Math.max(event.clientY, bound.top), bound.bottom) - bound.top) / bound.height) - canvas.height / 2
+        })
+        window.J = ["red", "orange", "yellow", "lime", "brightblue", "magenta", "purple", "white", "pink"]
+    </script>
+    <script src="wasm.js"></script>
+</body>
+</html>

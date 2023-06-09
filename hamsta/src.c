@@ -272,7 +272,7 @@ int main() {
         if (i == flag_len) return 0;
 
         wait_for(3);
-        printf("Welp! That was %d miles, time top stop\n", distance);
+        printf("Welp! That was %d miles, time to stop\n", distance);
         puts("But let's do it again!");
     } while (1);
 

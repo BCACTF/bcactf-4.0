@@ -1,0 +1,21 @@
+name: Super Circle Game
+categories:
+  - rev
+value: 250
+flag: bcactf{w3lcome_ag3nt_7bf43fd70}
+description: |-
+  My friend sent me this super game, but he told me there are
+  still some bugs. He said that right now all the player skins
+  and their names are sent to the client, even if the skins
+  are hidden / secret. 
+
+  The name of the secret skin texture is the flag :)
+hints:
+  - want to decode the messages? Find the decoder!
+authors:
+  - Andrew
+visible: true
+deploy:
+  web:
+    build: .
+    expose: 3000/tcp

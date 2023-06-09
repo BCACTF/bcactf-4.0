@@ -1,11 +1,10 @@
 name: Lottery
 categories:
   - webex
-value: 100
+value: 125
 flag:
   file: ./server/flag.txt
-description: |-
-  Play the BCACTF Lottery! Can you beat the odds?
+description: Play the BCACTF Lottery! Can you beat the odds?
 authors:
   - Marvin
 files:
@@ -13,5 +12,5 @@ files:
 deploy:
   web:
     build: .
-    expose: 5000/tcp
+    expose: 3000/tcp
 visible: true

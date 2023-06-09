@@ -1,9 +1,11 @@
 name: ow (VOLUME WARNING)
 categories:
   - foren
-value: 75
+value: 125
 flag: bcactf{n01s3_f4s2ph6}
 description: |-
+  (VOLUME WARNING)
+  
   SOMEONE WAS WHISPERING THE FLAG IN MY EAR BUT I COULDN'T HEAR THEM OVER THE DEAFENING SOUND OF THE APOCALYPSE 
   
   PLEASE HELP
@@ -13,7 +15,7 @@ hints:
   - (VOLUME WARNING)
   - What might whispering in one ear entail? 
 files:
-  - src: ow.mp3
+  - src: ./ow.mp3
 authors:
   - Marvin
 visible: true
