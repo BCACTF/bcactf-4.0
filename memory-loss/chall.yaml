@@ -23,3 +23,6 @@ files:
   - src: /home/ctf/memoryl0ss
     dest: memoryl0ss
     container: nc
+  - src: /home/ctf/memoryl0ss
+    dest: memoryl0ss
+    container: nc
