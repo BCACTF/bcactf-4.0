@@ -20,7 +20,7 @@ export default [
         "hidden": false
     },
     {
-        "name": "bcactf{",
+        "name": "bcactf{w3lcome_ag3nt_7bf43fd70}",
         "path": "ggfl44gs.png",
         "hidden": true
     },
