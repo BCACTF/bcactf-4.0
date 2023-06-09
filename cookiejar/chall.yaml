@@ -1,7 +1,7 @@
-name: Discord
+name: Cookie Jar
 categories:
   - webex
-value: 50
+value: 75
 flag: 
   file: ./flag.txt
 description: |-
@@ -12,3 +12,4 @@ hints:
 authors:
   - Jack
 visible: true
+# TODO deployment
