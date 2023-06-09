@@ -8,8 +8,8 @@ description: |-
   I heards the Johnsons' cookie shop is amazing, but unfortunately the owner isn't around,
   Can you help me get the Chocolate Chip and Oatmeal Cookies?
 hints:
-  - Where does the server get the information for order creation
-  - John (The Owner) can only accept orders from the table
+  - Where does the server get the information for order creation?
+  - There are two separate important tasks - order creation and order acceptance.
 authors:
   - Jack
 visible: true
