@@ -1,7 +1,7 @@
 name: Mushroom
 categories:
   - rev
-value: 175
+value: 125
 flag: bcactf{UN1Ty_f14g}
 description: |-
   Wow, a game with a mushroom in it! 
