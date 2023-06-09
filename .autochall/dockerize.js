@@ -105,7 +105,7 @@ const createPyWebDocker = async (chall) => {
         console.error("requirements.txt NOT FOUND. Please add necessary lib and their versions (ex, Flask)");
         return;
     }
-    if (!(await input.confirm("Please confirm that the server code will listen on PORT 5000"))) {
+    if (!(await input.confirm("Please confirm that the server code will listen on PORT 3000"))) {
         console.error("Please make necessary changes to challenge");
         return;
     }
@@ -125,14 +125,14 @@ RUN pip3 install -r requirements.txt
 COPY . .
 
 # run and expose
-EXPOSE 5000
-CMD ["python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=5000"]`);
+EXPOSE 3000
+CMD ["python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=3000"]`);
 console.log(chalk.gray("[!] Copied Dockerfile"));
     const challMeta = {...chall};
     delete challMeta.path;
     delete challMeta.dir;
 
-    challMeta.deploy = {web: {build: ".", expose: "5000/tcp"}};
+    challMeta.deploy = {web: {build: ".", expose: "3000/tcp"}};
     console.log(chalk.gray("[!] Modified chall.yaml"));
 
     writeFileSync(join(chall.path, "chall.yaml"), stringify(challMeta));
