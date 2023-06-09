@@ -2,8 +2,9 @@ FROM --platform=linux/amd64 python:3
 RUN useradd -m -d /home/ctf -u 12345 ctf
 WORKDIR /home/ctf
 
-COPY etc/passwd ./etc
-COPY etc/shadow ./etc
+COPY etc/passwd ./etc/
+COPY etc/shadow ./etc/
+
 COPY main.py .
 COPY ynetd .
 RUN chmod +x ynetd
