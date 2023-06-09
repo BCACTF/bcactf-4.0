@@ -2,10 +2,12 @@ name: Cookie Jar
 categories:
   - webex
 value: 75
-flag: 
+flag:
   file: ./flag.txt
-description: |-
-  I heards the Johnsons' cookie shop is amazing, but unfortunately the owner isn't around,
+description: >-
+  I heards the Johnsons' cookie shop is amazing, but unfortunately the owner
+  isn't around,
+
   Can you help me get the Chocolate Chip and Oatmeal Cookies?
 hints:
   - Where does the server get the information for order creation?
@@ -13,4 +15,7 @@ hints:
 authors:
   - Jack
 visible: true
-# TODO deployment
+deploy:
+  web:
+    build: .
+    expose: 3000/tcp

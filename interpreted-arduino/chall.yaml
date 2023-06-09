@@ -15,7 +15,7 @@ files:
   - src: ./main.ino
 authors:
   - Mudasir Ali
-visible: false # TODO needs to be fixed
+visible: true
 deploy:
   nc:
     build: .
