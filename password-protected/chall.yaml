@@ -7,7 +7,7 @@ flag:
 description: |-
   Can you help log Jon Wilkie back into his account?
 hints:
-  - Can you see what is inside the shadow?
+  - Do you know any common users?
   - Have you heard of RockYou?
 files:
   - src: ./password_protected.py
