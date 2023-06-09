@@ -7,6 +7,8 @@ flag:
 description: |-
   I want to read this really cool article, but they have a paywall
   Can you get me around that?
+hints:
+  - No hints... Good luck!
 authors:
   - Jack
 visible: true
