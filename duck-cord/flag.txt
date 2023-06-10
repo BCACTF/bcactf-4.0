@@ -1,1 +1,1 @@
-flag{H3LL0_AG3NT_DUCK_ur_m1ssi0n_I5_h4ve_fun_8e9201e}
+bcactf{H3LL0_AG3NT_DUCK_ur_m1ssi0n_I5_h4ve_fun_8e9201e}
