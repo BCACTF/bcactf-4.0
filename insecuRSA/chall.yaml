@@ -12,7 +12,7 @@ hints:
   - What can cause a public key to be easily factored?
 files:
   - src: ./flag.enc
-  - src: ./pubkey.pum.pem
+  - src: ./pubkey.pub.pem
 authors:
   - Zsofia
 visible: true
