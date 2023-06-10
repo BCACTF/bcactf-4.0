@@ -1,0 +1,20 @@
+name: WORD GAME
+categories:
+  - webex
+value: 200
+flag:
+  file: ./flag.txt
+description: >-
+  MADE WORD GAME, FIND FLAG
+hints:
+  - Investigate where each input is used
+  - How can you access any unwanted data in the database?
+authors:
+  - Marvin
+visible: true
+files:
+  - src: ./app.py
+deploy:
+  web:
+    build: .
+    expose: 3000/tcp
