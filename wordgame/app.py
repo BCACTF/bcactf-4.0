@@ -51,18 +51,18 @@ def ask():
     word = request.form.get("word")
     regex = re.compile(ptrn.replace("?", "."))
     if not regex.match(word.upper()):
-        return render_template("index.html", pattern=randPtrn(), message=f"{word.upper()} does not match {ptrn}")
+        return render_template("index.html", pattern=randPtrn(), message=f"{word.upper()} ISNT {ptrn}")
     if checkWd(word.upper()):
-        return render_template("index.html", pattern=randPtrn(), message=f"{word.upper()} is a correct answer")
+        return render_template("index.html", pattern=randPtrn(), message=f"{word.upper()} DOES WORK")
     rndAns = getAns(ptrn)
     if rndAns == None:
-        return render_template("index.html", pattern=randPtrn(), message=f"no solutions lol")
+        return render_template("index.html", pattern=randPtrn(), message=f"LMAO ZERO SOLS")
     padW = word.ljust(max(len(word),len(rndAns)))
     padR = rndAns.ljust(max(len(word),len(rndAns)))
     q = [i for i in range(len(padW)) if padW[i] != padR[i]]
     if len(q) == 0:
-        return render_template("index.html", pattern=randPtrn(), message=f"huh, that was weird")
-    return render_template("index.html", pattern=randPtrn(), message=f"{word} is not a word. Hint: Double check char {min(q)}")
+        return render_template("index.html", pattern=randPtrn(), message=f"HUHH WHAT")
+    return render_template("index.html", pattern=randPtrn(), message=f"{word} ISNT WORD. HINT: CHAR {min(q)}")
 
 
 if __name__ == "__main__":

