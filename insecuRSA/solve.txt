@@ -1,0 +1,8 @@
+this challenge uses an insecure rsa key, of which the modulus can be factored using the fermat method.
+1. view the modulus and exponent of the pem-formatted key by transforming it into an asn1 key with the openssl command:
+    openssl x509 -pubin -in pubkey.pub.pem -out key.crt -noout
+2. one of the most common attacks on the (cont later for writeups)
+
+
+this rsa key is vulnerable to the fermat method, in which N = [(c+d)/2]^2-[(c-d)/2]^2
+you can bruteforce it (might be too big tbh) or use a fermat sieve 
