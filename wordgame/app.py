@@ -49,7 +49,7 @@ def index():
 def ask():
     ptrn = request.form.get("ptrn")
     word = request.form.get("word")
-    regex = re.compile(ptrn.replace("?", "."))
+    regex = re.compile(re.sub("[^A-Za-z.]","",ptrn.replace("?", ".")).upper())
     if not regex.match(word.upper()):
         return render_template("index.html", pattern=randPtrn(), message=f"{word.upper()} ISNT {ptrn}")
     if checkWd(word.upper()):
@@ -67,3 +67,4 @@ def ask():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=3000)
+    
