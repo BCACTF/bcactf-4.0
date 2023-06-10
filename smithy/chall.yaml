@@ -10,6 +10,9 @@ description: |-
 hints:
   - I did manage to catch a peek of the first few bits (probably around a half) of one of the numbers he used to make the key... could that help?
   - The first bits were 0x3780000000000000000000000000000
+files:
+  - src: ./flag.enc
+  - src: ./pubkey.pub.pem
 authors:
   - Zsofia
 visible: true
