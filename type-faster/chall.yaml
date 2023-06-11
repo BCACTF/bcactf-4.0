@@ -1,9 +1,9 @@
 name: Type Faster
 categories:
   - webex
-value: 75
+value: 100
 flag: 
-  file: server/flag.txt
+  file: ./server/flag.txt
 description: |-
   I'm storing some secret information on my website, but I realized I need an anti-captcha service.
   I don't want any humans to gain these insights before the AI revolution, so I've drafted a system that only robots could beat.
@@ -16,4 +16,7 @@ authors:
   - Mudasir
   - Jack
 visible: true
-# TODO: deployment
+deploy:
+  web:
+    build: .
+    expose: 3000/tcp
