@@ -1,0 +1,22 @@
+name: Type Faster
+categories:
+  - webex
+value: 100
+flag: 
+  file: ./flag.txt
+description: |-
+  I'm storing some secret information on my website, but I realized I need an anti-captcha service.
+  I don't want any humans to gain these insights before the AI revolution, so I've drafted a system that only robots could beat.
+  I don't think any humans could type *this* fast!
+hints:
+  - Have you tried typing faster?
+  - You should read faster too.
+  - Don't mess up.
+authors:
+  - Mudasir
+  - Jack
+visible: true
+deploy:
+  web:
+    build: .
+    expose: 3000/tcp
