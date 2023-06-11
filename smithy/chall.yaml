@@ -2,7 +2,7 @@ name: Smithy
 categories:
   - crypto
 value: 250
-flag: bcactf{c0pp3r5m1th_l0v3s_z3r03s_483h94}
+flag: bcactf{s4m3b1t5_l0l_4643}
 description: |-
   I went to a blacksmith (sometimes called a smithy) the other day to get my copper sword fixed.
   When I came to pick it up, the smith told me he RSA-encoded it, and gave me a key to decrypt it with.
