@@ -7,8 +7,6 @@ RUN pip3 install -r requirements.txt
 
 # Copy over everything else
 COPY . .
-# cd into the server folder
-WORKDIR /app/server
 
 # Run the server!
 EXPOSE 3000
