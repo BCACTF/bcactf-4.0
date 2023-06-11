@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORD GAME</title>
+    <style>body {font-family: 'Fira Code', 'Roboto Mono', monospace}</style>
+</head>
+<body>
+    <h2>PLAY THIS WORD GAME</h2>
+
+    <h3>GIVE WORD THAT FITS THIS:</h3>
+    <h3>{{pattern}}</h3>
+    <form action="/" method="POST">
+        <input type="hidden" id="ptrn" name="ptrn" value="{{pattern}}"> 
+        <input type="text" name="word" id="word">
+        <input type="submit" value="SEND">
+    </form>
+    <h3>{{message}}</h3>
+</body>
+</html>
