@@ -66,6 +66,8 @@ int main() {
     setbuf(stderr, nullptr);
 
     Pet* pets[PET_COUNT];
+    pets[0] = (Pet*) &DEBUG;
+    pets[1] = (Pet*) setbuf;
     char input[512];
     size_t s;
 
