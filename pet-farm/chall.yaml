@@ -1,0 +1,23 @@
+name: pet-zoo
+categories:
+  - binex
+value: 275
+flag:
+  file: ./flag.txt
+description: I am tired of C. I'm tired of structs. Let's play a game of
+  polymorphism; Welcome to the Pet Zoo
+hints:
+  - What's the difference between C strings and C++ strings?
+  - How does inheritance even work for *virtual* functions
+files:
+  - src: Dockerfile
+  - src: /home/ctf/petfarm
+    dest: petfarm
+    container: nc
+authors:
+  - Andrew
+visible: true
+deploy:
+  nc:
+    build: .
+    expose: 9999/tcp
