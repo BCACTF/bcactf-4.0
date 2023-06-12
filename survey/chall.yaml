@@ -1,0 +1,15 @@
+name: Survey
+categories:
+  - misc
+value: 25
+flag: bcactf{s33_y0U_n3xT_y34R_bC4_CTF_5_hI8C0}
+description: |-
+  Well, the CTF is almost over!
+  Let us know how we did in exchange for 25 points.
+  **Please note** that this challenge will **NOT** impact time-based tiebreakers.
+  Please take your time filling this out and be honest as we really appreciate your feedback.
+  See you next year!
+  [https://forms.gle/VAuZPN7TnmVnLASP8](https://forms.gle/VAuZPN7TnmVnLASP8)
+authors:
+  - Krish
+visible: true
