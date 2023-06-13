@@ -1,4 +1,4 @@
-# Suzanne (Foren, 150 points) 
+# Suzanne (Foren, 175 points) 
 
 If you look at the two models separately, they look pretty much identical. However, looking at them together reveals slight differences in some of the vertices.
 
@@ -31,7 +31,7 @@ And here is the output:
 ```
 
 
-We can see that the z-coordinates of the verticies are different, the modified model seems to have them shifted up a bit. Let's print out the differences between the two z-coordinates:
+We can see that the z-coordinates of the vertices are different, the modified model seems to have them shifted up a bit. Let's print out the differences between the two z-coordinates:
 
 ```python
 import bpy
